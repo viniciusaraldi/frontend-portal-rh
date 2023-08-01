@@ -1,0 +1,16 @@
+.opcoesLista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.opcoesLista li {
+    list-style-type: none;
+    margin-left: 10px;
+    padding: 1em;
+    font-size: 1.3em;
+}
+.opcoesLista li:hover {
+    background-color: #c6c6c6;
+    padding: 1em;
+    border-radius: 20px;
+}

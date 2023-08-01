@@ -1,0 +1,19 @@
+.formularioSugestao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formularioSugestao textarea {
+    width: 600px;
+    height: 400px;
+}
+.formularioSugestao button {
+    padding: 1em;
+    width: 50%;
+    background-color: green;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+}
