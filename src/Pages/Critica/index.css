@@ -1,6 +1,6 @@
 .containerSugestao {
     background-color: #282c34;
-    height: 86vh;
+    height: 80vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -10,8 +10,13 @@
     justify-content: space-between;
     align-items: center;
     height: auto;
-    width: 60%;
+    width: 90%;
     padding: 1em;
     border-radius: 20px;
     background-color: #fff;
+}
+@media screen and (min-width: 800px) {
+    .containerDiv {
+        width: 60%;
+    }
 }

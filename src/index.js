@@ -12,21 +12,25 @@ import Elogio from './Pages/Elogio';
 import Critica from './Pages/Critica';
 import CriaElogio from './Pages/CriaElogio/CriaElogio';
 import CriaCritica from './Pages/CriaCritica/CriaCritica';
+import NotPageFound from './Components/NotPageFound';
+import FormularioUsuario from './Components/FormularioUsuario';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/sugestao" element={<Sugestao />} />
-        <Route path="/elogio" element={<Elogio />} />
-        <Route path="/critica" element={<Critica />} />
-        <Route path='/cria-sugestao' element={<CriaSugestao />} />
-        <Route path='/cria-elogio' element={<CriaElogio />} />
-        <Route path='/cria-critica' element={<CriaCritica />} />
-      </Routes>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sugestao" element={<Sugestao />} />
+          <Route path="/elogio" element={<Elogio />} />
+          <Route path="/critica" element={<Critica />} />
+          <Route path='/cria-sugestao' element={<CriaSugestao />} />
+          <Route path='/cria-elogio' element={<CriaElogio />} />
+          <Route path='/cria-critica' element={<CriaCritica />} />
+          <Route path='/login' element={<FormularioUsuario />} />
+          <Route path='*' element={<NotPageFound />} />
+        </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );

@@ -1,0 +1,13 @@
+.labelCadastroUsuario {
+    width: 40%;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 1em;
+}
+.inputCadastroUsuario {
+    width: 100%;
+    padding: 1em;
+    border-radius: 20px;
+    border: none;
+    margin: .5em 0;
+}

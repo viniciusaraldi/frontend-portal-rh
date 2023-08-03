@@ -7,6 +7,7 @@ function Header() {
         <header className="containerHeader">
             <Brand />
             <Opcoes />
+
         </header>
     )
 }

@@ -1,8 +1,9 @@
+import './index.css'
 
 function ButtonSubmit(props) {
     return (
         <>
-            <button type={props.type}>Enviar</button>
+            <button className="btnEnvio" type={props.type}>Enviar</button>
         </>
     )
 }

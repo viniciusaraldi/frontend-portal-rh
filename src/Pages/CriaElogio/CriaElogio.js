@@ -5,7 +5,7 @@ function CriaElogio() {
   return (
     <div className="App">
       <header className="App-header">
-      <h3>Escreva sua Elogio:</h3>
+      <h3>Escreva seu Elogio:</h3>
         <Forms 
           placeholder="Digite seu elogio"
           name="elogio"

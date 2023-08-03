@@ -1,0 +1,12 @@
+.btnEnvio {
+    padding: 1em;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    width: 10%;
+    background-color: green;
+    color: #fff;
+    cursor: pointer;
+}
+.btnEnvio:hover {
+    border: 1px solid black;
+}

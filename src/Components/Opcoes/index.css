@@ -3,13 +3,13 @@
     justify-content: space-between;
     align-items: center;
 }
-.opcoesLista li {
+.opcoesLista li, .opcoesLista i {
     list-style-type: none;
     margin-left: 10px;
     padding: 1em;
     font-size: 1.3em;
 }
-.opcoesLista li:hover {
+.opcoesLista li:hover, .opcoesLista i:hover {
     background-color: #c6c6c6;
     padding: 1em;
     border-radius: 20px;
