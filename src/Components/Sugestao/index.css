@@ -2,7 +2,7 @@
     background-color: #282c34;
     height: 80vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
@@ -15,10 +15,11 @@
     padding: 1em;
     border-radius: 20px;
     background-color: #fff;
+    margin-bottom: 1em;
 }
 @media screen and (min-width: 800px) {
     .containerDiv {
-        width: 60%;
+        width: 90%;
     }
 }
 .sugestaoApiLogado {

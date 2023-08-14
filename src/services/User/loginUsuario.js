@@ -1,7 +1,8 @@
 import { baseUrl } from '../baseUrl.js'
 
 async function geraRequisicaoUsuario(usuario, password) {
-    const dados = await fetch(`${baseUrl}/login`, {
+    console.log(usuario,password)
+    const dados = await fetch(`${baseUrl}/login/`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -11,8 +12,14 @@ async function geraRequisicaoUsuario(usuario, password) {
             password: password
         })
     });
-    const dadosTratados = await dados.json();
-    return dadosTratados.message
+
+    if(dados.ok) {
+        const dadosTratados = await dados.json();
+        return dadosTratados.message
+    } else {
+        console.log("Erro de Login: " + dados.statusText)
+        throw new Error('Erro de requisicao')
+    }
 }
 
 export default geraRequisicaoUsuario

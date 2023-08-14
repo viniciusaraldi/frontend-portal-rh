@@ -1,23 +1,26 @@
-import geraRequisicaoUsuario from '../../services/User/adicionarUsuario'
-import ButtonSubmit from '../ButtonSubmit'
-import InputUsuario from '../InputUsuario'
-import './index.css'
+import cadastroUsuarioAdminApi from '../../services/User/cadastroUsuario.js'
+import ButtonSubmit from '../ButtonSubmit/index.js'
+import InputUsuario from '../InputUsuario/index.js'
+import SelectRole from '../SelectRole/index.js'
 
-function FormularioUsuario() {
+function CadastroUsuarioAdmin() {
 
     const handleSubmit = async e => {
         e.preventDefault()
         const usuario = (e.target[0].value)
         const password = (e.target[1].value)
+        const role = e.target[2].value
         try {
-            localStorage.setItem("token", await geraRequisicaoUsuario(usuario, password))
+            await cadastroUsuarioAdminApi(usuario, password, role)
+            alert("Feito Cadastro com sucesso!");
             return window.location.href = "/";
         } catch (err) {
-            return console.log("Erro ao tentar fazer login")
+            alert("Erro ao fazer cadastro, entre em contato com o TI")
+            console.log("Erro ao cadastrar: " + err)
+            return false
         }
 
     }
-
     return (
         <form className="formularioCadastroUsuario" onSubmit={handleSubmit}>
             <InputUsuario
@@ -28,9 +31,10 @@ function FormularioUsuario() {
                 label="Senha"
                 placeholder="Digite sua senha"
             />
+            <SelectRole />
             <ButtonSubmit />
         </form>
     )
 }
 
-export default FormularioUsuario
+export default CadastroUsuarioAdmin

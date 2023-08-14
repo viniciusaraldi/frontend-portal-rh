@@ -2,9 +2,9 @@ import { baseUrl } from "../baseUrl.js";
 
 const token = localStorage.getItem("token") || []
 
-async function geraRequisicaoSugestao() {
+async function geraRequisicaoCritica() {
     try {
-        const dados = await fetch(`${baseUrl}/sugestoes/`, {
+        const dados = await fetch(`${baseUrl}/criticas/`, {
             method: "GET",
             headers: {
                 Authorization: `Bearer ${token}`
@@ -22,4 +22,4 @@ async function geraRequisicaoSugestao() {
     }
 }
 
-export default geraRequisicaoSugestao
+export default geraRequisicaoCritica

@@ -1,7 +1,8 @@
+import './index.css'
 
 function TextoOpcao(props) {
     return (
-        <div>
+        <div className="containerSubtituloTextoOpcao">
             <h2>Adicione {props.name} ao Forum</h2>
             <h3>Para Avaliação</h3>
         </div>

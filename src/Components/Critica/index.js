@@ -1,7 +1,7 @@
-import ButtonCriaSugestao from '../../Components/ButtonCriaSugestao'
-import TextoOpcao from '../../Components/TextoOpcao'
-
+import ButtonCriaSugestao from '../ButtonCriaSugestao'
+import TextoOpcao from '../TextoOpcao'
 import './index.css'
+import PegaCritica from '../PegaCritica'
 
 function Critica() {
     return (
@@ -14,6 +14,8 @@ function Critica() {
                     redireciona="critica"
                 />
             </div>
+
+            <PegaCritica />
 
         </section>
     )

@@ -1,8 +1,8 @@
-import { baseUrl } from './baseUrl.js'
+import { baseUrl } from '../baseUrl.js'
 
-async function adicionaSugestao(text) {
+async function adicionaElogio(text) {
     try {
-        const recebeDados = await fetch(`${baseUrl}/sugestoes`, {
+        const recebeDados = await fetch(`${baseUrl}/elogios`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -19,4 +19,4 @@ async function adicionaSugestao(text) {
 
 }
 
-export default adicionaSugestao
+export default adicionaElogio

@@ -7,13 +7,12 @@ import './index.css';
 import CriaSugestao from './Pages/CriaSugestao/CriaSugestao.js';
 import Home from './Pages/Home'
 import Header from './Components/Header';
-import Sugestao from './Pages/Sugestao';
-import Elogio from './Pages/Elogio';
-import Critica from './Pages/Critica';
 import CriaElogio from './Pages/CriaElogio/CriaElogio';
 import CriaCritica from './Pages/CriaCritica/CriaCritica';
 import NotPageFound from './Components/NotPageFound';
-import FormularioUsuario from './Components/FormularioUsuario';
+import Login from './Components/Login';
+import CadastroUsuarioAdmin from './Components/CadastroUsuarioAdmin';
+import Feedback from './Pages/Feedback';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,13 +21,12 @@ root.render(
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/sugestao" element={<Sugestao />} />
-          <Route path="/elogio" element={<Elogio />} />
-          <Route path="/critica" element={<Critica />} />
+          <Route path="/feedback" element={<Feedback />} />
           <Route path='/cria-sugestao' element={<CriaSugestao />} />
           <Route path='/cria-elogio' element={<CriaElogio />} />
           <Route path='/cria-critica' element={<CriaCritica />} />
-          <Route path='/login' element={<FormularioUsuario />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/cadastro-usuario-admin' element={<CadastroUsuarioAdmin />} />
           <Route path='*' element={<NotPageFound />} />
         </Routes>
     </BrowserRouter>

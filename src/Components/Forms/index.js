@@ -1,13 +1,14 @@
-import adicionaSugestao from "../../services/adicionaSugestao";
-import adicionaCritica from "../../services/adicionaCritica";
-import adicionaElogio from "../../services/adicionaElogio";
+import adicionaSugestao from "../../services/Sugestoes/adicionaSugestao.js";
+import adicionaCritica from "../../services/Criticas/adicionaCritica.js";
+import adicionaElogio from "../../services/Elogios/adicionaElogio.js";
 import ButtonSubmit from "../ButtonSubmit";
 import Textarea from "../Textarea"
 import './index.css'
 
 
 function Forms(props) {
-    let textoDigitado = ''
+    let textoDigitado = '';
+    const urlFeedback = "http://localhost:3001/feedback";
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -21,19 +22,19 @@ function Forms(props) {
             const req = await adicionaSugestao(textoDigitado)
             const res = await req;
             alert("Sucesso!")
-            window.location.href = "http://localhost:3001/sugestao"
+            window.location.href = urlFeedback
             return res;
         } else if (window.location.href === "http://localhost:3001/cria-elogio") {
             const req = await adicionaElogio(textoDigitado)
             const res = await req;
             alert("Sucesso!")
-            window.location.href = "http://localhost:3001/elogio"
+            window.location.href = urlFeedback
             return res;
         } else if (window.location.href === "http://localhost:3001/cria-critica") {
             const req = await adicionaCritica(textoDigitado)
             const res = await req;
             alert("Sucesso!")
-            window.location.href = "http://localhost:3001/critica"
+            window.location.href = urlFeedback
             return res;
         }
     }

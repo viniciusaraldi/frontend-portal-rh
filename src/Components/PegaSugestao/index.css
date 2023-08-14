@@ -1,0 +1,15 @@
+.containerSugestaoLogado {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+}
+.sugestaoApiLogadoLista {
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 1em 0;
+}

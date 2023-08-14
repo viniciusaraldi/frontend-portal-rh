@@ -1,9 +1,24 @@
+import CardDiaSemanaNatura from '../../Components/CardDiaSemanaNatura'
 import './index.css'
 
 function Home() {
     return (
         <section className='containerHome'>
-            <h1>Aqui será uma descrição do objetivo do Portal!</h1>
+            <CardDiaSemanaNatura 
+                diaSemanal="Segunda-feira"
+            />
+            <CardDiaSemanaNatura 
+                diaSemanal="Terça-feira"
+            />
+            <CardDiaSemanaNatura 
+                diaSemanal="Quarta-feira"
+            />
+            <CardDiaSemanaNatura 
+                diaSemanal="Quinta-feira"
+            />
+            <CardDiaSemanaNatura 
+                diaSemanal="Sexta-feira"
+            />
         </section>
     )
 }

@@ -4,13 +4,13 @@ import './index.css';
 
 function Opcoes() {
 
-    const opcoes = ['Sugestao', 'Elogio', 'Critica']
+    const opcoes = ['Feedback', 'Natura']
 
     return (
         <div>
             <ul className="opcoesLista">
                 {opcoes.map((opcao) => (
-                    <Link to={opcao.toLowerCase()}><li key={opcao.id}>{opcao}</li></Link>
+                    <Link to={opcao.toLowerCase()}><li key={opcoes.indexOf(opcao)}>{opcao}</li></Link>
                 ))}
                 <Profile />
             </ul>

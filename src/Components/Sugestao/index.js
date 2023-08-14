@@ -1,22 +1,25 @@
 import ButtonCriaSugestao from '../../Components/ButtonCriaSugestao'
+import PegaSugestao from '../../Components/PegaSugestao'
 import TextoOpcao from '../../Components/TextoOpcao'
 
 import './index.css'
 
-function Elogio() {
+function Sugestao() {
     return (
         <section className="containerSugestao">
             <div className="containerDiv">
                 <TextoOpcao 
-                    name="Elogio"
+                    name="Sugestão"
                 />
                 <ButtonCriaSugestao 
-                    redireciona="elogio"
+                    redireciona="sugestao"
                 />
             </div>
+
+            <PegaSugestao />
 
         </section>
     )
 }
 
-export default Elogio
+export default Sugestao
