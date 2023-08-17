@@ -1,6 +1,20 @@
 import { baseUrl } from "../baseUrl.js";
+import buscaRole from "../Role/buscaRole.js";
 
 async function cadastroUsuarioAdminApi(usuario, password, role) {
+    
+    const dadosRole = await buscaRole()
+    const roleVerifica = await dadosRole
+    console.log(roleVerifica)
+
+    roleVerifica.forEach( (roleVer) => {
+        if (role === roleVer.role) {
+            role = roleVer._id
+        } else {
+            return false
+        }
+    })
+
     try {
         const dados = await fetch(`${baseUrl}/cadastro-usuario`, {
             method: "POST",

@@ -1,0 +1,23 @@
+.containerCardapio {
+    color: #fff;
+    border: 1px solid #fff;
+    width: 100%;
+}
+.ordemCardapio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.containerAtualizaDeletaCardapio {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.containerInputAtualizaCardapio{
+    display: flex;
+    justify-content: space-around;
+}

@@ -1,5 +1,5 @@
 import '../../App.css';
-import Forms from '../../Components/Forms';
+import Forms from '../Forms';
 
 function CriaSugestao() {
   return (

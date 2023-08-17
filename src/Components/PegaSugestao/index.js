@@ -18,13 +18,14 @@ function PegaSugestao() {
     if (!local) {
         return false
     }
+
     return (
         <>
-            {local && (
+            {local && dados !== false && (
                 <div className='containerSugestaoLogado'>
                     <ul className='sugestaoApiLogado'>
                         {dados.map((dados) => (
-                            <li className='sugestaoApiLogadoLista' key={dados.text}>{dados.text}</li>
+                            <li className='sugestaoApiLogadoLista' key={dados._id}>{dados.text}</li>
                         ))}
                     </ul>
                 </div>

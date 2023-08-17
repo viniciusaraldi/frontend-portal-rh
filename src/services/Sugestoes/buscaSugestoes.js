@@ -12,7 +12,7 @@ async function geraRequisicaoSugestao() {
         });
 
         if (dados.status === 401) {
-            return console.log("Sem permissão!")
+            return false;
         }
 
         const dadosTratados = await dados.json()

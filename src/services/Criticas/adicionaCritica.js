@@ -14,7 +14,7 @@ async function adicionaCritica(text) {
         const dadosRetornados = await recebeDados?.json()
         return dadosRetornados
     } catch (err) {
-        console.log(err)
+        return console.log(err)
     }
 
 }

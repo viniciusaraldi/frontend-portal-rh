@@ -1,14 +1,25 @@
+import buscaRole from '../../services/Role/buscaRole.js'
+import { useEffect, useState } from "react"
 import './index.css'
 
 
 function SelectRole() {
+    const [roles, setRoles] = useState([])
 
-    const opcoes = ["ti", "rh", "Natura"]
+    useEffect(() => {
+        geraBuscaRole()
+    }, [])
+
+    async function geraBuscaRole() {
+        const dados = await buscaRole()
+        setRoles(await dados)
+    }
 
     return (
         <select className='SelectCadastroUsuario'>
-            {opcoes.map((opcao) => (
-                <option key={opcao} value={opcao}>{opcao}</option>
+            {/* <option>Selecione um Cargo Para Continuar</option> */}
+            {roles.map((role) => (
+                <option key={role._id} value={role.role}>{role.role}</option>
             ))}
         </select>
     )

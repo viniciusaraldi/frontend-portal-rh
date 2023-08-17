@@ -10,7 +10,7 @@ function Opcoes() {
         <div>
             <ul className="opcoesLista">
                 {opcoes.map((opcao) => (
-                    <Link to={opcao.toLowerCase()}><li key={opcoes.indexOf(opcao)}>{opcao}</li></Link>
+                    <Link to={opcao.toLowerCase()} key={opcoes.indexOf(opcao)}><li key={opcoes.indexOf(opcao)}>{opcao}</li></Link>
                 ))}
                 <Profile />
             </ul>

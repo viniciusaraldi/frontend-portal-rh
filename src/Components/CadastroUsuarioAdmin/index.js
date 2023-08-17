@@ -32,7 +32,10 @@ function CadastroUsuarioAdmin() {
                 placeholder="Digite sua senha"
             />
             <SelectRole />
-            <ButtonSubmit />
+            <ButtonSubmit 
+                type="submit"
+                valueText="Enviar"
+            />
         </form>
     )
 }
