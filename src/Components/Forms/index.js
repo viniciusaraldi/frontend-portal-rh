@@ -18,19 +18,19 @@ function Forms(props) {
     } 
 
     async function geraRequisicao() {
-        if (window.location.href === "http://localhost:3001/cria-sugestao") {
+        if (window.location.href === `${process.env.REACT_APP_API_URL}/cria-sugestao`) {
             const req = await adicionaSugestao(textoDigitado)
             const res = await req;
             alert("Sucesso!")
             window.location.href = urlFeedback
             return res;
-        } else if (window.location.href === "http://localhost:3001/cria-elogio") {
+        } else if (window.location.href === `${process.env.REACT_APP_API_URL}/cria-elogio`) {
             const req = await adicionaElogio(textoDigitado)
             const res = await req;
             alert("Sucesso!")
             window.location.href = urlFeedback
             return res;
-        } else if (window.location.href === "http://localhost:3001/cria-critica") {
+        } else if (window.location.href === `${process.env.REACT_APP_API_URL}/cria-critica`) {
             const req = await adicionaCritica(textoDigitado)
             const res = await req;
             alert("Sucesso!")
