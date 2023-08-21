@@ -9,6 +9,7 @@ function CriaElogio() {
         <Forms 
           placeholder="Digite seu elogio"
           name="elogio"
+          valueBtn="elogio"
         />
       </header>
     </div>

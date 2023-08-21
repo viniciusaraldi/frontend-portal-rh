@@ -9,6 +9,7 @@ function CriaCritica() {
         <Forms 
           placeholder="Digite sua critica"
           name="critica"
+          valueBtn="critica"
         />
       </header>
     </div>

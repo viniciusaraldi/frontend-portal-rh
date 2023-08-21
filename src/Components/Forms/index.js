@@ -8,30 +8,30 @@ import './index.css'
 
 function Forms(props) {
     let textoDigitado = '';
-    const urlFeedback = "http://localhost:3001/feedback";
+    const urlFeedback = process.env.REACT_APP_API_URL;
 
     const handleSubmit = e => {
         e.preventDefault();
         const textoValor = e.target[0].value 
+        const valorBtn = e.target[1].dataset.valuebtn
         textoDigitado = textoValor
-        geraRequisicao()
+        geraRequisicao(valorBtn)
     } 
 
-    async function geraRequisicao() {
-        console.log(process.env.REACT_APP_API_URL)
-        if (window.location.href === `${process.env.REACT_APP_API_URL}/cria-sugestao`) {
+    async function geraRequisicao(valorBtn) {
+        if (valorBtn === "sugestao") {
             const req = await adicionaSugestao(textoDigitado)
             const res = await req;
             alert("Sucesso!")
             window.location.href = urlFeedback
             return res;
-        } else if (window.location.href === `${process.env.REACT_APP_API_URL}/cria-elogio`) {
+        } else if (valorBtn === "elogio") {
             const req = await adicionaElogio(textoDigitado)
             const res = await req;
             alert("Sucesso!")
             window.location.href = urlFeedback
             return res;
-        } else if (window.location.href === `${process.env.REACT_APP_API_URL}/cria-critica`) {
+        } else if (valorBtn === "critica") {
             const req = await adicionaCritica(textoDigitado)
             const res = await req;
             alert("Sucesso!")
@@ -49,6 +49,7 @@ function Forms(props) {
             <ButtonSubmit
                 type="submit"
                 valueText="Enviar"
+                valueBtn={props.valueBtn}
             />
         </form>
     )

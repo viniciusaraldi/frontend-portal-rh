@@ -9,6 +9,7 @@ function CriaSugestao() {
         <Forms 
           placeholder="Digite sua sugestão"
           name="sugestao"
+          valueBtn="sugestao"
         />
       </header>
     </div>
