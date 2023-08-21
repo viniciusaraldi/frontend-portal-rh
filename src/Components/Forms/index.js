@@ -18,6 +18,7 @@ function Forms(props) {
     } 
 
     async function geraRequisicao() {
+        console.log(process.env.REACT_APP_API_URL)
         if (window.location.href === `${process.env.REACT_APP_API_URL}/cria-sugestao`) {
             const req = await adicionaSugestao(textoDigitado)
             const res = await req;
