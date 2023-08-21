@@ -47,6 +47,7 @@ function Forms(props) {
             />
             <ButtonSubmit
                 type="submit"
+                valueText="Enviar"
             />
         </form>
     )
