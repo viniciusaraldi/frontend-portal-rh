@@ -8,7 +8,7 @@ import './index.css'
 
 function Forms(props) {
     let textoDigitado = '';
-    const urlFeedback = process.env.REACT_APP_API_URL;
+    const urlFeedback = "/";
 
     const handleSubmit = e => {
         e.preventDefault();
