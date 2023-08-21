@@ -21,7 +21,7 @@ import ResetaSenhaUsuario from './Pages/ResetaSenhaUsuario';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <BrowserRouter>
         <Header />
         <Routes>
@@ -38,7 +38,7 @@ root.render(
           <Route path='*' element={<NotPageFound />} />
         </Routes>
     </BrowserRouter>
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
