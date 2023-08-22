@@ -13,7 +13,6 @@ function Login() {
         const password = (e.target[1].value)
         const role = e.target[2].value
         localStorage.setItem("token", await geraRequisicaoUsuario(usuario, password, role))
-        console.log(await geraRequisicaoUsuario(usuario, password, role))
         if (localStorage.getItem("token") === 'false') {
             return alert("Usuario ou Senhas incorretos, verifique!")
         } else {

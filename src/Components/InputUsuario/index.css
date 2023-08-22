@@ -1,5 +1,5 @@
 .labelCadastroUsuario {
-    width: 40%;
+    width: auto;
     color: #fff;
     font-size: 1.5em;
     padding: 1em;
@@ -15,4 +15,10 @@
     border-radius: 20px;
     border: none;
     margin: .5em 0;
+}
+
+@media screen and (min-width: 900px) {
+    .labelCadastroUsuario {
+        width: 50%;
+    }
 }

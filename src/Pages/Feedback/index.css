@@ -1,6 +1,13 @@
 .containerFeedback {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     width: 100%;
+}
+
+@media screen and (min-width: 900px) {
+    .containerFeedback {
+        flex-direction: row;
+    }
 }
