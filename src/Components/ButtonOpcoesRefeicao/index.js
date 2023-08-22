@@ -5,7 +5,7 @@ function ButtonOpcoesRefeicao(props) {
 
     return (
         <div className='containerBtnOpcoesNatura'>
-            <button data-value={props.value.toLowerCase()} style={{backgroundColor: props.backgroundColor}} type="button">{props.value}</button>
+            <button data-value={props.value.toLowerCase()} style={{backgroundColor: props.backgroundColor}} className="btnEnvio" type="button">{props.value}</button>
         </div>
         )
 }

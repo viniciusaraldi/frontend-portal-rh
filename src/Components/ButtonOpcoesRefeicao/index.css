@@ -2,4 +2,5 @@
     color: #fff;
     padding: 1em;
     cursor: pointer;
+    display: flex;
 }

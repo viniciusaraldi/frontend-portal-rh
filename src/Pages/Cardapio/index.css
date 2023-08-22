@@ -21,3 +21,14 @@
     display: flex;
     justify-content: space-around;
 }
+.ContainerBtnAtualizaEDeleta {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 1em;
+}
+.containerDadosAPI {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}

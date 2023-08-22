@@ -2,11 +2,12 @@ import './index.css'
 
 function CardDiaSemanaNatura(props) {
     const refeicoes = props.refeicao.toString().split(",")
-    const date = new Date(props.diaSemanal)
+    const dia = props.diaSemanal.split('-')[2]
+    const mes = props.diaSemanal.split('-')[1]
 
     return (
         <div className="containerDiaSemana">
-            <h2>{date.getDate() + 1}/{date.getMonth()+1}</h2>
+            <h2>{dia}/{mes}</h2>
             <ul>
                 {refeicoes.map((refeicao) => (
                     <li key={refeicao}>{refeicao}</li>

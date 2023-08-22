@@ -12,6 +12,8 @@
     font-size: 1.5em;
     cursor: pointer;
     margin: 1em 0;
+    border: 1px solid transparent;
+    transition: .2s;
 }
 
 @media screen and (min-width: 900px) {
@@ -19,5 +21,14 @@
         height: 350px;
         justify-content: flex-start;
         align-items: center;
+    }
+    .containerDiaSemana:hover {
+        border: 1px solid black;
+        color: #fff;
+        background-color: green;
+    }
+    .containerDiaSemana:visited,.containerDiaSemana:active {
+        color: #fff;
+        background-color: blue;
     }
 }

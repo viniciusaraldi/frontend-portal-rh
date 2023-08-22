@@ -1,0 +1,35 @@
+.containerHome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 85vh;
+    padding: 1em;
+    align-items: center;
+}
+.containerHomeAtencao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 30vh;
+    padding: 1em;
+    border-radius: 20px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: .2s;
+}
+
+@media screen and (min-width: 800px) {
+    .containerHome {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .containerHomeAtencao {
+        width: 35%;
+        height: 15vh;
+    }
+}
+
+.containerHomeAtencao:hover {
+    width: 50%;
+}

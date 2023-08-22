@@ -50,7 +50,7 @@ function Cardapio() {
     }
 
     return (
-        <div>
+        <section>
             {autorizacao === false && (
                 <section className="containerCardapio">
                     <ul className="ordemCardapio">
@@ -82,8 +82,11 @@ function Cardapio() {
                         <ul className="ordemCardapio">
                         {cardapios.map( (cardapio) => (
                             <>
-                                <li key={cardapio._id}>{cardapio.data}</li>
-                                <li key={cardapio._v}>{cardapio.cardapio}</li>
+                                <div className="containerDadosAPI">
+                                    <li key={cardapio._v}>{cardapio.cardapio}</li>
+                                    <li key={cardapio._id}>{cardapio.data}</li>
+                                </div>
+                                <div className="ContainerBtnAtualizaEDeleta">
                                 <ButtonOpcoesRefeicao 
                                     backgroundColor="green"
                                     value="Confirmar"
@@ -92,6 +95,7 @@ function Cardapio() {
                                     backgroundColor="red"
                                     value="Excluir"
                                 />
+                                </div>
                             </>
                         ))}
                         </ul>
@@ -99,7 +103,7 @@ function Cardapio() {
                 </section>
             )}
 
-        </div>
+        </section>
     )
 }
 
