@@ -2,10 +2,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #282c34;
-    color: #fff;
+    color: var(--color-white);
     flex-direction: column;
     padding: 1em;
+    height: 86vh;
 }
 
 @media screen and (min-width: 900px) {

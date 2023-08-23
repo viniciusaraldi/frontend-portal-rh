@@ -4,8 +4,8 @@
     justify-content: space-around;
     align-items: center;
     border-radius: 20px;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--color-white);
+    color: var(--color-black);
     height: auto;
     width: 200px;
     padding: 1em;
@@ -23,12 +23,12 @@
         align-items: center;
     }
     .containerDiaSemana:hover {
-        border: 1px solid black;
-        color: #fff;
-        background-color: green;
+        border: 1px solid var(--color-black);
+        color: var(--color-white);
+        background-color: var(--color-green);
     }
     .containerDiaSemana:visited,.containerDiaSemana:active {
-        color: #fff;
+        color: var(--color-white);
         background-color: blue;
     }
 }

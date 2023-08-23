@@ -83,8 +83,15 @@ function Cardapio() {
                         {cardapios.map( (cardapio) => (
                             <>
                                 <div className="containerDadosAPI">
-                                    <li key={cardapio._v}>{cardapio.cardapio}</li>
-                                    <li key={cardapio._id}>{cardapio.data}</li>
+                                    <div>
+                                        <h3>CARDAPIO</h3>
+                                        <li key={cardapio._v}>{cardapio.cardapio}</li>
+                                    </div>
+                                    <div>
+                                        <h3>DATA</h3>
+                                        <li key={cardapio._id}>{cardapio.data}</li>
+                                    </div>
+
                                 </div>
                                 <div className="ContainerBtnAtualizaEDeleta">
                                 <ButtonOpcoesRefeicao 

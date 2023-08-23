@@ -1,8 +1,9 @@
+
 .containerHome {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 85vh;
+    height: 86vh;
     padding: 1em;
     align-items: center;
 }
@@ -14,7 +15,7 @@
     height: 30vh;
     padding: 1em;
     border-radius: 20px;
-    background-color: #fff;
+    background-color: var(--color-white);
     cursor: pointer;
     transition: .2s;
 }

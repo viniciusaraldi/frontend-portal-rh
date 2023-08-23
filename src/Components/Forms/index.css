@@ -12,10 +12,10 @@
 .formularioSugestao button {
     padding: 1em;
     width: 50%;
-    background-color: green;
+    background-color: var(--color-green);
     border: none;
     border-radius: 20px;
-    color: #fff;
+    color: var(--color-white);
     cursor: pointer;
 }
 

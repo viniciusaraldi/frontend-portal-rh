@@ -1,6 +1,5 @@
 .containerSugestao {
-    background-color: #282c34;
-    height: 30vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +13,7 @@
     width: 90%;
     padding: 1em;
     border-radius: 20px;
-    background-color: #fff;
+    background-color: var(--color-white);
     margin-bottom: 1em;
 }
 @media screen and (min-width: 800px) {
@@ -23,5 +22,5 @@
     }
 }
 .sugestaoApiLogado {
-    color: #fff;
+    color: var(--color-white);
 }

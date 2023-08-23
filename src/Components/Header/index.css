@@ -5,5 +5,5 @@
     flex-wrap: wrap;
     width: 100%;
     padding: 1em;
-    background-color: #fff;
+    background-color: var(--color-white);
 }

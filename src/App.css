@@ -2,7 +2,7 @@
   text-align: center;
 }
 .App-header {
-  background-color: #282c34;
+  background-color: var(--color-black);
   min-height: 80vh;
   display: flex;
   flex-direction: column;

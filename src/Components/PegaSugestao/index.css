@@ -2,9 +2,11 @@
     display: flex;
     width: 80%;
     flex-direction: column;
+    overflow: auto;
+    height: 350px;
 }
 .sugestaoApiLogadoLista {
-    border: 2px solid #fff;
+    border: 2px solid var(--color-white);
     border-radius: 20px;
     padding: 1em;
     width: 100%;

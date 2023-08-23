@@ -10,7 +10,8 @@
     font-size: 1.3em;
 }
 .opcoesLista li:hover, .opcoesLista i:hover {
-    background-color: #c6c6c6;
+    background-color: var(--color-green);
+    color: var(--color-white);
     padding: 1em;
     border-radius: 20px;
 }
