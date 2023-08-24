@@ -32,3 +32,19 @@
     display: flex;
     justify-content: space-around;
 }
+.containerDadosAPIEstilo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin: 1em 0;
+}
+.containerDadosAPIEstilo h3 {
+    font-size: 2em;
+    margin: 20px 0;
+}
+.containerDadosAPIEstiloLista {
+    width: 100%;
+    font-size: 1.5em;
+    margin: .3em 0;
+}

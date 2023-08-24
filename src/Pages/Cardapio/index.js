@@ -55,10 +55,18 @@ function Cardapio() {
                 <section className="containerCardapio">
                     <ul className="ordemCardapio">
                     {cardapios.map( (cardapio) => (
-                        <>
-                            <li key={cardapio._id}>{cardapio.data}</li>
-                            <li key={cardapio._v}>{cardapio.cardapio}</li>
-                        </>
+                        <div className="containerDadosAPIEstilo" key={cardapio._id}>
+                            <div>
+                                <h3>DATA</h3>
+                                <li key={cardapio._id} className="containerDadosAPIEstiloLista">{cardapio.data}</li>
+                            </div>
+                            <div>
+                                <h3>CARDAPIO</h3>
+                                {cardapio.cardapio[0].split(",").map((alimento) => (
+                                    <li key={alimento} className="containerDadosAPIEstiloLista">{alimento}</li>
+                                ))}
+                            </div>
+                        </div>
                     ))}
                     </ul>
                 </section>
@@ -82,14 +90,16 @@ function Cardapio() {
                         <ul className="ordemCardapio">
                         {cardapios.map( (cardapio) => (
                             <>
-                                <div className="containerDadosAPI">
-                                    <div>
+                                <div className="containerDadosAPI" key={cardapio._id}>
+                                    <div className="containerDadosAPIEstilo">
                                         <h3>CARDAPIO</h3>
-                                        <li key={cardapio._v}>{cardapio.cardapio}</li>
+                                        {cardapio.cardapio[0].split(",").map((alimento) => (
+                                            <li key={alimento} className="containerDadosAPIEstiloLista">{alimento}</li>
+                                        ))}
                                     </div>
                                     <div>
                                         <h3>DATA</h3>
-                                        <li key={cardapio._id}>{cardapio.data}</li>
+                                        <li key={cardapio._id}>{cardapio.data.split(",")}</li>
                                     </div>
 
                                 </div>
