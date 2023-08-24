@@ -1,8 +1,10 @@
 .containerSugestao {
-    height: 80vh;
+    height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin: 1em 0;
 }
 .containerDiv {
     display: flex;

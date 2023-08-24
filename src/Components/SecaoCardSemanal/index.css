@@ -1,11 +1,12 @@
 .containerSemana {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     color: var(--color-white);
-    flex-direction: column;
+    flex-direction: row;
     padding: 1em;
-    height: 86vh;
+    height: auto;
+    overflow: auto;
 }
 
 @media screen and (min-width: 900px) {

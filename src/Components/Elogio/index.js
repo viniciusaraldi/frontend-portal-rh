@@ -1,6 +1,6 @@
 import ButtonCriaSugestao from '../ButtonCriaSugestao'
 import TextoOpcao from '../TextoOpcao'
-import './index.css'
+// import './index.css'
 import PegaElogio from '../PegaElogio'
 
 function Elogio() {

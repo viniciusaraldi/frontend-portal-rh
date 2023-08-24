@@ -1,9 +1,13 @@
 .containerSugestaoLogado {
     display: flex;
-    width: 80%;
+    width: 100%;
     flex-direction: column;
     overflow: auto;
-    height: 350px;
+    height: 50vh;
+    border-radius: 20px;
+    background-color: var(--color-gray);
+    padding: 1em;
+    border: 2px solid var(--color-white);
 }
 .sugestaoApiLogadoLista {
     border: 2px solid var(--color-white);

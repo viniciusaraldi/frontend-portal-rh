@@ -6,12 +6,12 @@
     border-radius: 20px;
     background-color: var(--color-white);
     color: var(--color-black);
-    height: auto;
+    height: 350px;
     width: 200px;
     padding: 1em;
     font-size: 1.5em;
     cursor: pointer;
-    margin: 1em 0;
+    margin: 1em;
     border: 1px solid transparent;
     transition: .2s;
 }

@@ -4,13 +4,15 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 1em 0.5em;
+    width: auto;
 }
 .containerDiv {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: auto;
-    width: 90%;
+    height: 200px;
+    width: 300px;
     padding: 1em;
     border-radius: 20px;
     background-color: var(--color-white);
