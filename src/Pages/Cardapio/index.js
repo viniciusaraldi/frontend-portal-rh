@@ -91,13 +91,13 @@ function Cardapio() {
                         {cardapios.map( (cardapio) => (
                             <>
                                 <div className="containerDadosAPI" key={cardapio._id}>
-                                    <div className="containerDadosAPIEstilo">
+                                    <div className="containerDadosAPIEstiloAutorizado">
                                         <h3>CARDAPIO</h3>
                                         {cardapio.cardapio[0].split(",").map((alimento) => (
                                             <li key={alimento} className="containerDadosAPIEstiloLista">{alimento}</li>
                                         ))}
                                     </div>
-                                    <div>
+                                    <div className="containerDadosAPIDataEstiloAutorizado">
                                         <h3>DATA</h3>
                                         <li key={cardapio._id}>{cardapio.data.split(",")}</li>
                                     </div>

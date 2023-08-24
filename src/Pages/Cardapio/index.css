@@ -10,12 +10,11 @@
     flex-direction: column;
 }
 .containerAtualizaDeletaCardapio {
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
 }
 .containerInputAtualizaCardapio{
     display: flex;
@@ -30,14 +29,25 @@
 .containerDadosAPI {
     width: 100%;
     display: flex;
+    justify-content: center;
+}
+.containerDadosAPIEstiloAutorizado {
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    width: 60%;
+    margin: 1em;
+}
+.containerDadosAPIDataEstiloAutorizado {
+    margin: .5em 1em;
+    font-size: 1.5em;
 }
 .containerDadosAPIEstilo {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
-    margin: 1em 0;
+    margin: 1em;
 }
 .containerDadosAPIEstilo h3 {
     font-size: 2em;
