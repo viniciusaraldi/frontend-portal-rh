@@ -1,6 +1,9 @@
 @font-face {
   font-family: "normalidad";
+  font-style: normal;
+  font-weight: 400;
   src: url("./assets/fonts/Normalidad.otf");
+  font-display: swap;
 }
 
 :root {
