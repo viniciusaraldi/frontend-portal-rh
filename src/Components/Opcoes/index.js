@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import Profile from '../Profile';
+// import Profile from '../Profile';
 import './index.css';
 
 function Opcoes() {
 
-    const opcoes = ['Feedback', 'Natura']
+    const opcoes = ['Feedback', 'Natura', 'Perfil']
 
     return (
         <div>
@@ -12,7 +12,7 @@ function Opcoes() {
                 {opcoes.map((opcao) => (
                     <Link to={opcao.toLowerCase()} key={opcoes.indexOf(opcao)}><li key={opcoes.indexOf(opcao)}>{opcao}</li></Link>
                 ))}
-                <Profile />
+                {/* <Profile /> */}
             </ul>
         </div>
     )
