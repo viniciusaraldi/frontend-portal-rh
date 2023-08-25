@@ -8,7 +8,8 @@ import './index.css';
 import Home from './Pages/Home'
 import Feedback from './Pages/Feedback';
 import Cardapio from './Pages/Cardapio';
-import Header from './Components/Header';
+// import Header from './Components/Header';
+
 // Components
 import NotPageFound from './Components/NotPageFound';
 import Login from './Pages/Login';
@@ -20,7 +21,6 @@ import CriaCritica from './Components/CriaCritica/CriaCritica';
 import ResetaSenhaUsuario from './Pages/ResetaSenhaUsuario';
 
 const ComponentHeader = React.lazy(() => import('./Components/Header'))
-const ComponentSecaoCardSemanal = React.lazy(async () => await import('./Components/SecaoCardSemanal'))
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -33,7 +33,7 @@ root.render(
           <Route path="/cria-sugestao" element={<CriaSugestao />} />
           <Route path="/cria-elogio" element={<CriaElogio />} />
           <Route path="/cria-critica" element={<CriaCritica />} />
-          <Route path="/natura" element={<ComponentSecaoCardSemanal />} />
+          <Route path="/natura" element={<SecaoCardSemanal />} />
           <Route path="/natura/:id" element={<Cardapio />} />
           <Route path='/login' element={<Login />} />
           <Route path='/resete-password' element={<ResetaSenhaUsuario />} />
