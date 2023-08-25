@@ -19,18 +19,21 @@ import CriaElogio from './Components/CriaElogio/CriaElogio';
 import CriaCritica from './Components/CriaCritica/CriaCritica';
 import ResetaSenhaUsuario from './Pages/ResetaSenhaUsuario';
 
+const ComponentHeader = React.lazy(() => import('./Components/Header'))
+const ComponentSecaoCardSemanal = React.lazy(async () => await import('./Components/SecaoCardSemanal'))
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
     <BrowserRouter>
-        <Header />
+        <ComponentHeader />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/feedback" element={<Feedback />} />
           <Route path="/cria-sugestao" element={<CriaSugestao />} />
           <Route path="/cria-elogio" element={<CriaElogio />} />
           <Route path="/cria-critica" element={<CriaCritica />} />
-          <Route path="/natura" element={<SecaoCardSemanal />} />
+          <Route path="/natura" element={<ComponentSecaoCardSemanal />} />
           <Route path="/natura/:id" element={<Cardapio />} />
           <Route path='/login' element={<Login />} />
           <Route path='/resete-password' element={<ResetaSenhaUsuario />} />
