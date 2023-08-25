@@ -13,7 +13,7 @@
     padding: 1em;
     width: 50%;
     background-color: var(--color-green);
-    border: none;
+    border: 1px solid transparent;
     border-radius: 20px;
     color: var(--color-white);
     cursor: pointer;

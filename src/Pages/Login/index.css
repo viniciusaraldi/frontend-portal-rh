@@ -4,12 +4,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 80vh;
     width: 100%;
 }
 
 @media screen and (min-width: 900px) {
-    .formularioCadastroUsuario {
-        height: auto;
-    }
 }

@@ -8,5 +8,5 @@
     cursor: pointer;
 }
 .btnEnvio:hover {
-    border: 1px solid var(--color-black);
+    border: 1px solid var(--color-white);
 }
