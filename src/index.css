@@ -23,7 +23,7 @@ body {
   font-family: var(--font-primary);
   font-size: 14px;
   background-color: var(--color-gray);
-  background: var(--color-gray) url("./assets/images/backgroundPortalGrupoRosaMaria.png") no-repeat center;
+  background: var(--color-gray) url("./assets/images/backgroundPortalGrupoRosaMaria.webp") no-repeat center;
   background-size: cover;
   height: 100vh;
 }
