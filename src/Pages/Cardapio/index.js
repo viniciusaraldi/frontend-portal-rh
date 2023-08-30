@@ -104,11 +104,13 @@ function Cardapio() {
 
                                 </div>
                                 <div className="ContainerBtnAtualizaEDeleta">
-                                <ButtonOpcoesRefeicao 
+                                <ButtonOpcoesRefeicao
+                                    datavalue="Confirmar"
                                     backgroundColor="green"
                                     value="Confirmar"
                                 />
                                 <ButtonOpcoesRefeicao
+                                    datavalue="Excluir"
                                     backgroundColor="red"
                                     value="Excluir"
                                 />
