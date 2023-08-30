@@ -4,6 +4,7 @@ import ButtonSubmit from '../../Components/ButtonSubmit/index.js'
 import InputUsuario from '../../Components/InputUsuario/index.js'
 import SelectRole from '../../Components/SelectRole/index.js'
 import './index.css'
+import logo from "../../assets/images/logo.svg"
 
 function Login() {
 
@@ -28,6 +29,7 @@ function Login() {
 
     return (
         <div className='containerFormulario'>
+            <img src={logo} alt="Logo do portal" />
             <form className="formularioCadastroUsuario" onSubmit={handleSubmit}>
                 <h2 className='tituloLogin'>Login</h2>
                 <InputUsuario
