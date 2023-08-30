@@ -1,12 +1,33 @@
+.containerFormulario {
+    width: 100%;
+    text-align: center;
+}
 .formularioCadastroUsuario {
     display: flex;
-    gap: 1em;
+    gap: 1.5em;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
-    width: 100%;
+    width: 90%;
+    margin: 3em auto;
+    background-color: var(--color-black);
+    padding: 1em 0;
+    border: 1px solid var(--color-white);
+}
+.tituloLogin {
+    color: var(--color-white);
+    padding: 1em 0;
+    text-transform: uppercase;
+}
+.linkReseteSenha {
+    width: 70%;
 }
 
 @media screen and (min-width: 900px) {
+    .formularioCadastroUsuario {
+        width: 60%;
+    }
+    .linkReseteSenha {
+        width: 100%;
+    }
 }

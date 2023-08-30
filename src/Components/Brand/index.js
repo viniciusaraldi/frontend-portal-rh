@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom"
+import logo from "../../assets/images/logo.svg"
 
 function Brand() {
     return(
         <>
-            <Link to={"/"}><h1>Portal Grupo RM</h1></Link>
+            <Link to={"/"}><img src={logo} alt="Logo do portal" /></Link>
         </>
     )
 }

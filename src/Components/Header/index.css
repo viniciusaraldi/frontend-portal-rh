@@ -4,6 +4,6 @@
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    padding: 1em;
-    background-color: var(--color-white);
+    padding: 1em 0;
+    background-color: var(--color-black);
 }

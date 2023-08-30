@@ -5,12 +5,14 @@
     overflow: auto;
     height: 50vh;
     border-radius: 20px;
-    background-color: var(--color-gray);
+    background-color: var(--color-white);
     padding: 1em;
     border: 2px solid var(--color-white);
 }
 .sugestaoApiLogadoLista {
-    border: 2px solid var(--color-white);
+    background-color: var(--color-black);
+    border: 2px solid transparent;
+    color: var(--color-white);
     border-radius: 20px;
     padding: 1em;
     width: 100%;

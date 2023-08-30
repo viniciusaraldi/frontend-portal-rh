@@ -1,6 +1,6 @@
 import Brand from "../Brand";
 import Opcoes from "../Opcoes";
-import './index.css'
+import './index.css';
 
 function Header() {
     return (

@@ -27,27 +27,30 @@ function Login() {
     }
 
     return (
-        <form className="formularioCadastroUsuario" onSubmit={handleSubmit}>
-            <InputUsuario
-                label="Usuario"
-                placeholder="Digite seu usuario"
-            />
-            <InputUsuario
-                label="Senha"
-                placeholder="Digite sua senha"
-            />
-            <SelectRole />
-            <Link to="/resete-password">
-                <ButtonSubmit
-                    type="submit"
-                    valueText="Esqueceu sua Senha?"
+        <div className='containerFormulario'>
+            <form className="formularioCadastroUsuario" onSubmit={handleSubmit}>
+                <h2 className='tituloLogin'>Login</h2>
+                <InputUsuario
+                    label="Usuario"
+                    placeholder="Digite seu usuario"
                 />
-            </Link>
-            <ButtonSubmit 
-                type="submit"
-                valueText="Enviar"
-            />
-        </form>
+                <InputUsuario
+                    label="Senha"
+                    placeholder="Digite sua senha"
+                />
+                <SelectRole />
+                <Link to="/resete-password" className='linkReseteSenha'>
+                    <ButtonSubmit
+                        type="submit"
+                        valueText="Esqueceu sua Senha? Clique aqui para alterar"
+                    />
+                </Link>
+                <ButtonSubmit 
+                    type="submit"
+                    valueText="Login"
+                />
+            </form>
+        </div>
     )
 }
 
