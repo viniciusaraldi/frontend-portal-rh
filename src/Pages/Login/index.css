@@ -35,4 +35,8 @@
     .linkReseteSenha {
         width: 100%;
     }
+    .containerFormulario img {
+        width: 50%;
+        margin: 5em 0 -1em 0;
+    }
 }
