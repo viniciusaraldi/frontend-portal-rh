@@ -41,16 +41,16 @@ function Login() {
                     placeholder="Digite sua senha"
                 />
                 <SelectRole />
+                <ButtonSubmit 
+                    type="submit"
+                    valueText="Login"
+                />                
                 <Link to="/resete-password" className='linkReseteSenha'>
                     <ButtonSubmit
                         type="submit"
                         valueText="Esqueceu sua Senha? Clique aqui para alterar"
-                    />
-                </Link>
-                <ButtonSubmit 
-                    type="submit"
-                    valueText="Login"
                 />
+            </Link>
             </form>
         </div>
     )
