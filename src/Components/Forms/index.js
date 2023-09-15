@@ -22,19 +22,16 @@ function Forms(props) {
         if (valorBtn === "sugestao") {
             const req = await adicionaSugestao(textoDigitado)
             const res = await req;
-            alert("Sucesso!")
             window.location.href = urlFeedback
             return res;
         } else if (valorBtn === "elogio") {
             const req = await adicionaElogio(textoDigitado)
             const res = await req;
-            alert("Sucesso!")
             window.location.href = urlFeedback
             return res;
         } else if (valorBtn === "critica") {
             const req = await adicionaCritica(textoDigitado)
             const res = await req;
-            alert("Sucesso!")
             window.location.href = urlFeedback
             return res;
         }

@@ -1,11 +1,28 @@
 import { Link } from "react-router-dom"
-import logo from "../../assets/images/logo.svg"
+import styled from "styled-components"
+import logo from "../../assets/images/logo_preto.png"
+
+const BrandImgStyled = styled.img`
+    width: 130px;
+    max-width: 100%;
+`;
+
+const BrandStyled = styled.div`
+    a {
+        display: inline-block;
+        width: 130px
+    }
+`;
 
 function Brand() {
     return(
-        <>
-            <Link to={"/"}><img src={logo} alt="Logo do portal" /></Link>
-        </>
+        <BrandStyled>
+            <Link to={"/"}>
+                <BrandImgStyled 
+                    src={logo} 
+                    alt="Logo do portal" />
+            </Link>
+        </BrandStyled>
     )
 }
 

@@ -5,36 +5,3 @@
   src: url("./assets/fonts/Normalidad.otf");
   font-display: swap;
 }
-
-:root {
-  --color-gray: #282c34;
-  --color-white: #fff;
-  --color-black: #000;
-  --color-green: #3BA478;
-
-  --font-primary: "normalidad";
-}
-
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
-}
-body {
-  font-family: var(--font-primary);
-  font-size: 14px;
-  background-color: var(--color-gray);
-  background: var(--color-gray) url("./assets/images/backgroundPortalGrupoRosaMaria.webp") no-repeat center;
-  background-size: cover;
-  height: 100vh;
-}
-li {
-  list-style-type: none;
-}
-a {
-  text-decoration: none;
-  color: var(--color-black);
-  text-align: center;
-}

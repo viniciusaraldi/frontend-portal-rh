@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+import { createGlobalStyle } from 'styled-components';
 // **************************** 
 import './index.css';
 // Pages
@@ -21,6 +22,43 @@ import CriaCritica from './Components/CriaCritica/CriaCritica';
 import ResetaSenhaUsuario from './Pages/ResetaSenhaUsuario';
 
 const ComponentHeader = React.lazy(() => import('./Components/Header'))
+const GlobalStyle = createGlobalStyle`
+    :root {
+      --color-primary: #C0ECFA;
+      --color-secondary: #fff;
+      --color-thirty: #000;
+
+      --font-primary: "normalidad";
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+    }
+    html,body {
+      overflow-x: hidden;
+      height: 100%;
+      width: 100%;
+    }
+    body {
+      background-color: var(--color-secondary);
+      font-family: var(--font-primary);
+      font-size: 16px;
+      font-weight: 400;
+    }
+    ::selection {
+      background-color: var(--color-primary);
+      color: var(--color-secondary);
+    }
+    li {
+      list-style-type: none;
+    }
+    a {
+      text-decoration: none;
+      color: var(--color-thirty);
+    }
+  `;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -33,13 +71,14 @@ root.render(
           <Route path="/cria-sugestao" element={<CriaSugestao />} />
           <Route path="/cria-elogio" element={<CriaElogio />} />
           <Route path="/cria-critica" element={<CriaCritica />} />
-          <Route path="/natura" element={<SecaoCardSemanal />} />
-          <Route path="/natura/:id" element={<Cardapio />} />
+          <Route path="/restaurante" element={<SecaoCardSemanal />} />
+          <Route path="/restaurante/:id" element={<Cardapio />} />
           <Route path='/login' element={<Login />} />
           <Route path='/resete-password' element={<ResetaSenhaUsuario />} />
           <Route path='/cadastro-usuario-admin' element={<CadastroUsuarioAdmin />} />
           <Route path='*' element={<NotPageFound />} />
         </Routes>
+        <GlobalStyle />
     </BrowserRouter>
   // </React.StrictMode>
 );
