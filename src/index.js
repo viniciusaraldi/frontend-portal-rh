@@ -16,9 +16,6 @@ import NotPageFound from './Components/NotPageFound';
 import Login from './Pages/Login';
 import CadastroUsuarioAdmin from './Components/CadastroUsuarioAdmin';
 import SecaoCardSemanal from './Components/SecaoCardSemanal';
-import CriaSugestao from './Components/CriaSugestao/CriaSugestao';
-import CriaElogio from './Components/CriaElogio/CriaElogio';
-import CriaCritica from './Components/CriaCritica/CriaCritica';
 import ResetaSenhaUsuario from './Pages/ResetaSenhaUsuario';
 
 const ComponentHeader = React.lazy(() => import('./Components/Header'))
@@ -68,9 +65,6 @@ root.render(
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/feedback" element={<Feedback />} />
-          <Route path="/cria-sugestao" element={<CriaSugestao />} />
-          <Route path="/cria-elogio" element={<CriaElogio />} />
-          <Route path="/cria-critica" element={<CriaCritica />} />
           <Route path="/restaurante" element={<SecaoCardSemanal />} />
           <Route path="/restaurante/:id" element={<Cardapio />} />
           <Route path='/login' element={<Login />} />

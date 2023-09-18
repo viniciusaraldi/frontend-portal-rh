@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-function HomeCanal(props) {
-    
 const HomeCanalStyled = styled.div`
     display: flex;
     justify-content: center;
@@ -31,6 +29,8 @@ const HomeCanalStyled = styled.div`
         }
     }`;
 
+function HomeCanal(props) {
+    
     return (
         <HomeCanalStyled
             backgroundimage={props.backgroundimage}>

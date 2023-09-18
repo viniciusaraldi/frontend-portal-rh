@@ -1,6 +1,7 @@
 import { baseUrl } from "../baseUrl";
 
-async function requisicaoFeedbackGet(categoria, feedback) {
+async function requisicaoFeedbackPost(categoria, feedback) {
+    console.log(categoria, feedback)
     try {
         const dadosApi = await fetch(`${baseUrl}/feedbacks`, {
             method: "POST",
@@ -19,4 +20,4 @@ async function requisicaoFeedbackGet(categoria, feedback) {
     }
 }
 
-export default requisicaoFeedbackGet
+export default requisicaoFeedbackPost

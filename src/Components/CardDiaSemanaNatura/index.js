@@ -42,7 +42,7 @@ function CardDiaSemanaNatura(props) {
             <h2>{dia}/{mes}</h2>
             <ul>
                 {refeicoes.map((refeicao) => (
-                    <li key={refeicao}>{refeicao}</li>
+                    <li key={refeicao}>{refeicao};</li>
                 ))}
             </ul>
         </ContainerDiaSemanaStyled>

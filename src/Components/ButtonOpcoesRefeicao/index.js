@@ -1,12 +1,21 @@
-import './index.css'
+import styled from 'styled-components'
+
+const ContainerBtnOpcoesNaturaStyled = styled.button`
+    color: var(--color-white);
+    padding: 1em;
+    cursor: pointer;
+    display: flex;
+    border: none;
+    border-radius: 20px;
+`;
 
 function ButtonOpcoesRefeicao(props) {
 
 
     return (
-        <div className='containerBtnOpcoesNatura'>
-            <button data-value={props.datavalue.toLowerCase()} style={{backgroundColor: props.backgroundColor}} className="btnEnvio" type="button">{props.value}</button>
-        </div>
+        <ContainerBtnOpcoesNaturaStyled data-value={props.datavalue.toLowerCase()} style={{backgroundColor: props.backgroundColor}} type="button">
+            {props.value}
+        </ContainerBtnOpcoesNaturaStyled>
         )
 }
 

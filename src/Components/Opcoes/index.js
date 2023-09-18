@@ -40,7 +40,7 @@ const HeaderOpcoesStyled = styled.div`
         margin-left: 10px;
         padding: 1em;
         font-size: 1.3em;
-        color: var(--color-white);
+        color: var(--color-thirty);
     }
     ul li:active, ul i:active {
         color: var(--color-secondary);
@@ -80,15 +80,15 @@ function Opcoes() {
     }
 
     return (
-        <HeaderOpcoesStyled>
-            <button onClick={handleAtivaBars}><i className="fa-solid fa-bars-staggered"></i></button>
+        <HeaderOpcoesStyled onClick={handleAtivaBars}>
+            <button><i className="fa-solid fa-bars-staggered"></i></button>
             <div className={activeBars ? 'div[data-bars=true]' : 'div[data-bars=false]'} data-bars={activeBars}>
                 <ul>
                     {opcoes.map((opcao) => (
-                        <Link to={opcao.toLowerCase()} key={opcoes.indexOf(opcao)}><li key={opcoes.indexOf(opcao)}>{opcao}</li></Link>
-                        ))}
+                        <Link to={opcao.toLowerCase()} key={opcoes.indexOf(opcao)} ><li key={opcoes.indexOf(opcao)}>{opcao}</li></Link>
+                    ))}
                     <Profile />
-                    <button onClick={handleAtivaBars}><i className="fa-solid fa-bars-staggered"></i></button>
+                    <button><i className="fa-solid fa-bars-staggered"></i></button>
                 </ul>
             </div>
         </HeaderOpcoesStyled>

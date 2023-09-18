@@ -1,7 +1,0 @@
-.containerBtnOpcoesNatura button {
-    color: var(--color-white);
-    padding: 1em;
-    cursor: pointer;
-    display: flex;
-    border-radius: 20px;
-}

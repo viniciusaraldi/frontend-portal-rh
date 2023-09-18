@@ -110,9 +110,7 @@ function Cardapio() {
         e.preventDefault()
         const value = e.target.dataset.value
         if (value === "confirmar") {
-            const dados = await atualizaCardapio(id,data,texto)
-            console.log(dados)
-            alert(dados.message)
+            await atualizaCardapio(id,data,texto)
             return window.location.href = "/restaurante";
         } else if (value === "excluir") {
             await deletaCardapio(id)
@@ -127,8 +125,6 @@ function Cardapio() {
             setTexto(e.target.value)
         }
     }
-
-    console.log(data, texto)
 
     const handleClickEditDatas = () => {     
         setActiveDate(!activeDate)
