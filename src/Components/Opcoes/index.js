@@ -40,7 +40,7 @@ const HeaderOpcoesStyled = styled.div`
         margin-left: 10px;
         padding: 1em;
         font-size: 1.3em;
-        color: var(--color-white);
+        color: var(--color-thirty);
     }
     ul li:active, ul i:active {
         color: var(--color-secondary);

@@ -31,17 +31,22 @@ const ContainerFeedbackStyled = styled.section`
     }
     button[name="categoria"] {
         background-color: var(--color-secondary);
-        margin: 1em;
-        padding: .5em 1em;
+        margin: 0.5em 0.2em;
+        padding: 0.5em 1em;
         border: none;
         box-shadow: 0 4px 8px -3px var(--color-thirty);
         cursor: pointer;
+        text-transform: uppercase;
+        width: 100px;
+        height: 40px;
+        border-radius: 10px;
     }
     .disable {
         display: none;
     }
     .active {
         display: inline-block;
+        transition: .2s all;
     }
     .labelCategoria {
         padding: 1em 0;
@@ -61,9 +66,18 @@ const ContainerFeedbackStyled = styled.section`
         border-radius: 20px;
 
     }
-    .selecionarCategoria > p {
+    .selecionarCategoria > p, .selecionarCategoria > button > p {
         margin-right: 10px;
         padding: 0 1em;
+        font-size: 1.2em;
+    }
+    .mensagemUsuario,.mensagemUsuario textarea,.mensagemUsuario.disable {
+        height: 0;
+        transition: .2s all;
+    }
+    .mensagemUsuario.active,.mensagemUsuario.active textarea,.mensagemUsuario.active {
+        height: 230px;
+        transition: .2s all;
     }
     @media screen and (min-width: 900px) {
         && {
@@ -96,12 +110,15 @@ function Feedback() {
 
     const handleClickCategoriaSelecionada = (e) => {
         e.preventDefault()
-        console.dir(e.target)
         setCategoriaSelecionada(e.target.outerText.toString())
     }
     
     const handleText = e => {
         setTexto(e.target.value)
+    }
+
+    const handleDesabled = () => {
+        setCategoriaSelecionada([])
     }
 
     return (
@@ -110,8 +127,17 @@ function Feedback() {
             <form className="formularioFeedback">
                 <label htmlFor="categoria" className="labelCategoria">
                     <div className="selecionarCategoria">
-                        <p>Selecione uma categoria: {categoriaSelecionada}</p>
-                        <button type="button" className={categoriaSelecionada.length === 0 ? "disable" : "active"}></button>
+                        {categoriaSelecionada.length === 0 ? (
+                        <>
+                            <p>Selecione uma categoria: </p>
+                            <button type="button" className={categoriaSelecionada.length === 0 ? "disable" : "active"}></button>
+                        </>) : (
+                        <>
+                            <button type="button" className="active" onClick={handleDesabled}>
+                                <p>Categoria Selecionada: {categoriaSelecionada}</p>
+                            </button>
+                        </>)}
+
                     </div>
                     {categoriaFeedback.map((categoria) => (
                             <button type="button" className={categoriaSelecionada.length === 0 ? "active" : "disable"} name="categoria" key={categoria} onClick={handleClickCategoriaSelecionada}>{categoria}</button>
@@ -126,12 +152,12 @@ function Feedback() {
                             placeholder="Escreva seu feedback"
                         />
                     </label>
+                    <ButtonSubmit
+                        type="submit"
+                        valueBtn="submit"
+                        valueText="Enviar"
+                    />
                 </div>
-                <ButtonSubmit
-                    type="submit"
-                    valueBtn="submit"
-                    valueText="Enviar"
-                />
 
             </form>
         </ContainerFeedbackStyled>
