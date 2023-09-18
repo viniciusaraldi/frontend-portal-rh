@@ -110,8 +110,8 @@ function Cardapio() {
         e.preventDefault()
         const value = e.target.dataset.value
         if (value === "confirmar") {
-            const dados = await atualizaCardapio(id,data,texto)
-            return dados, window.location.href = "/restaurante";
+            await atualizaCardapio(id,data,texto)
+            return window.location.href = "/restaurante";
         } else if (value === "excluir") {
             await deletaCardapio(id)
             return window.location.href = "/restaurante";
