@@ -34,9 +34,6 @@ const FormularioLoginStyled = styled.form`
         width: 100%;
         position: relative;
     }
-    && > div > label > input {
-        z-index: 5;
-    }
     && > div > button {
         position: absolute;
         top: 32px;
@@ -65,6 +62,7 @@ const FormularioLoginStyled = styled.form`
 
 function FormularioLogin() {
     const [passwordUser, setPasswordUser] = useState('')
+    const [typeInput, setTypeInput] = useState(false)
 
     const handleSubmit = async e => {
         e.preventDefault()
@@ -72,7 +70,7 @@ function FormularioLogin() {
         const role = e.target[3].value
         const inputError = e.target[4]
         localStorage.setItem("token", await geraRequisicaoUsuario(usuario, passwordUser, role))
-        if (localStorage.getItem("token") === 'false' || localStorage.getItem("token") === 'undefined') {
+        if (localStorage.getItem("token") === 'false' || localStorage.getItem("token") === undefined) {
             inputError.setCustomValidity('Usuario ou Senha incorretos, verifique!');
             inputError.reportValidity();
         } else {
@@ -84,12 +82,8 @@ function FormularioLogin() {
         setPasswordUser(e.target.value)
     }
 
-    const handleMostraSenha = (e) => {
-        if (e.target.type === 'text') {
-            e.target.type = 'password'
-        } else {
-            e.target.type = 'text'
-        }
+    const handleMostraSenha = () => {
+        setTypeInput(!typeInput)
     }
 
     return (
@@ -99,11 +93,11 @@ function FormularioLogin() {
                 label="Usuario"
                 placeholder="USUARIO"
             />
-            <div onClick={handleMostraSenha} onChange={handleAdicionaSenha}>
+            <div onChange={handleAdicionaSenha} onClick={handleMostraSenha}>
                 <InputUsuario
                     label="Senha"
                     placeholder="SENHA"
-                    type="password"
+                    type={typeInput ? "password" : "text"}
                 />
                 <ButtonSubmit
                     type="button"
