@@ -48,6 +48,9 @@ const GlobalStyle = createGlobalStyle`
       background-color: var(--color-primary);
       color: var(--color-secondary);
     }
+    select, option {
+      --webkit-appearance: none;
+    }
     li {
       list-style-type: none;
     }
