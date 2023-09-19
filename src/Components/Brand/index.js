@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import styled from "styled-components"
-import logo from "../../assets/images/logo_preto.png"
+import logo from "../../assets/images/logo_preto.webp"
 
 const BrandImgStyled = styled.img`
     width: 130px;

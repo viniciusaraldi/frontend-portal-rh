@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import OpcoesHome from '../OpcoesHome';
-import fundoFeedback from '../../assets/images/fundoFeedback.png'
-import fundoNatura from '../../assets/images/fundoNatura.png'
+import fundoFeedback from '../../assets/images/fundoFeedback.webp'
+import fundoNatura from '../../assets/images/fundoNatura.webp'
 
     const HomeContainerOpcoesStyled = styled.div`
         padding: 1em 1em 0;
