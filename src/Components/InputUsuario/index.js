@@ -18,7 +18,7 @@ const LabelStyled = styled.label`
         margin: 0.5em 0;
         border-bottom: 2px solid var(--color-thirty);
         font-weight: bold;
-        text-transform: uppercase;
+        text-transform: none;
     }
     && > input::placeholder {
         color: var(--color-thirty);
@@ -36,9 +36,10 @@ const LabelStyled = styled.label`
 `;
 
 function InputUsuario(props) {
+
     return (
         <LabelStyled htmlFor={props.label}>
-            <input type={props.type} name={props.label} placeholder={props.placeholder} />
+            <input type={props.type} name={props.label} id={props.label} placeholder={props.placeholder} required autoComplete="current-password"/>
         </LabelStyled>
     )
 }

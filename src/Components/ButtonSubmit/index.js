@@ -9,7 +9,7 @@ import styled from "styled-components";
         color: var(--color-thirty);
         cursor: pointer;
         border-radius: 20px;
-        margin: 0 .5em;
+        margin: ${props => props.margin ? props.margin : "0 .5em"};
 
         &&:hover, &&:active {
             border: 1px solid var(--color-primary);
@@ -24,7 +24,7 @@ import styled from "styled-components";
 function ButtonSubmit(props) {
 
     return (
-        <ButtonLoginStyled type={props.type} data-valuebtn={props.valueBtn} backcolor={props.backcolor} bordercolor={props.borderColor} font={props.fontValue} padding={props.paddingValue}>
+        <ButtonLoginStyled type={props.type} data-valuebtn={props.valueBtn} backcolor={props.backcolor} bordercolor={props.borderColor} font={props.fontValue} padding={props.paddingValue} margin={props.marginValue}>
             {props.valueText}
         </ButtonLoginStyled>
     )

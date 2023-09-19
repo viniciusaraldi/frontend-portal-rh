@@ -97,7 +97,7 @@ function Cardapio() {
     
     useEffect(() => {
         geraRequisicaoCardapio()
-        localStorage.getItem("token") === false || localStorage.getItem("token") === null ? setAutorizacao(false) : setAutorizacao(true)
+        localStorage.getItem("token") === 'false' || localStorage.getItem("token") === 'null' ? setAutorizacao(false) : setAutorizacao(true)
     }, [id])
 
     

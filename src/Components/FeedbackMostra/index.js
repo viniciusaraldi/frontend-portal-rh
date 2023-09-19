@@ -44,6 +44,11 @@ const ContainerFeedbackMostraStyled = styled.div`
     .overflow ul li button > i {
         color: var(--color-thirty);
     }
+    div.ContainerCategoriaLogado {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
 
     && > div {
         display: flex;
@@ -57,7 +62,7 @@ const ContainerFeedbackMostraStyled = styled.div`
         align-items: center;
         margin: 0 auto;
     } 
-    button[data-valueBtn="categorias"] {
+    button[type="button"] {
         background-color: var(--color-secondary);
         margin: 0.5em 0;
         padding: 0.5em 0em;
@@ -74,8 +79,9 @@ const ContainerFeedbackMostraStyled = styled.div`
 function FeedbackMostra() {
     const [feedEnviados, setFeedEnviados] = useState([])
     const [autorizacao, setAutorizacao] = useState(false)
+    const [feedFiltrados, setFeedFiltrados] = useState([])
     const token = localStorage.getItem("token")
-    const opcoes = ['sugestões','elogios', 'críticas']
+    const opcoes = ['sugestão','elogio', 'critica']
 
 
     useEffect(() => {
@@ -95,25 +101,30 @@ function FeedbackMostra() {
         return deleta
     }
 
+    const handleSeparaCategorias = (e) => {
+        setFeedFiltrados(feedEnviados.filter((item) => item.categorias === e.target.dataset.valuebtn.toUpperCase()))
+
+    }
+
     return (
         <ContainerFeedbackMostraStyled>
             {autorizacao && (
                 <div className="overflow">
                     <h2>Selecione uma categoria:</h2>
-                    <div className="ContainerCategoriaLogado">
+                    <div className="ContainerCategoriaLogado" onClick={handleSeparaCategorias}>
                         {opcoes.map((opcao) => (
                             <ButtonSubmit
                                 type="button"
-                                valueBtn="categorias"
+                                valueBtn={opcao}
                                 valueText={opcao}
-                                paddingValue="1em"
+                                paddingValue=".5em 0"
                                 borderColor="var(--color-primary)"
                                 key={opcoes.indexOf(opcao)}
                             />
                         ))}
                     </div>
                     <ul className="ContainerCategoriaLogado" onClick={handleExcluiFeedback}>
-                            {feedEnviados.map((feed) => (
+                            {feedFiltrados.length === 0 ? feedEnviados.map((feed) => (
                                 <li key={feed._id}>
                                     <p>{feed.categorias}</p>
                                     <p>{feed.feedbacks}</p>
@@ -121,10 +132,20 @@ function FeedbackMostra() {
                                         type="button"
                                         valueBtn={feed._id}
                                         valueText={(<i data-valuebtn={feed._id} className="fa-solid fa-xmark"></i>)}
-
                                     />
                                 </li>
-                            ))}
+                            )): feedFiltrados.map((feed) => (
+                                <li key={feed._id}>
+                                    <p>{feed.categorias}</p>
+                                    <p>{feed.feedbacks}</p>
+                                    <ButtonSubmit
+                                        type="button"
+                                        valueBtn={feed._id}
+                                        valueText={(<i data-valuebtn={feed._id} className="fa-solid fa-xmark"></i>)}
+                                    />
+                                </li>)
+                                )
+                            }
                     </ul>
                 </div>
 

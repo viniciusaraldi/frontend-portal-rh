@@ -13,8 +13,8 @@ const SectionFeedbackStyled = styled.section`
         background-color: var(--color-primary);
     }
 
-    && > div  button {
-        width: 100%;
+    && > div  button[data-valuebtn="button"] {
+        width: 96%;
     }
 
     .disable {
@@ -31,7 +31,7 @@ function Feedback() {
     const [autorizacao, setAutorizacao] = useState(false)
 
     useEffect(() => {
-        localStorage.getItem("token") === false || localStorage.getItem("token") === null ? setAutorizacao(false) : setAutorizacao(true)
+        localStorage.getItem("token") === 'false' || localStorage.getItem("token") === null ? setAutorizacao(false) : setAutorizacao(true)
     },[] )
 
     const handleAlteraVisão = () => {

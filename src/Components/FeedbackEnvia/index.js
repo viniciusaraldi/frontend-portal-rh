@@ -102,11 +102,11 @@ function FeedbackEnvia() {
                 <label htmlFor="categoria" className="labelCategoria">
                     {
                     categoriaSelecionada.length === 0 ? (
-                        <div className="selecionarCategoria">
+                        <div className="selecionarCategoria" >
                             <p>Selecione uma categoria: </p>
                             <div>
                                 {categoriaFeedback.map((categoria) => (
-                                    <button type="button" className={categoriaSelecionada.length === 0 ? "active" : "disable"} name="categoria" key={categoria} onClick={handleClickCategoriaSelecionada}>{categoria}</button>
+                                    <button id="categoria" type="button" className={categoriaSelecionada.length === 0 ? "active" : "disable"} name="categoria" key={categoria} onClick={handleClickCategoriaSelecionada}>{categoria}</button>
                                 ))}
                             </div>
                         </div>
@@ -117,6 +117,7 @@ function FeedbackEnvia() {
                                 valueText={`Categoria Selecionada: ${categoriaSelecionada}`}
                                 valueBtn="button"
                                 paddingValue="0.5em 0"
+                                marginValue="0 auto"
                                 fontValue="1.2em"
                                 borderColor="var(--color-primary)"
                             />

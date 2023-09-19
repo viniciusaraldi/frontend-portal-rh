@@ -30,6 +30,9 @@ const HeaderOpcoesStyled = styled.div`
         background: transparent;
         border: none;
     }
+    button i {
+        color: var(--color-thirty);
+    }
     ul {
         display: flex;
         flex-direction: column;

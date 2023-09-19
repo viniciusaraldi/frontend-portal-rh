@@ -14,6 +14,11 @@ const TextareaStyled = styled.label`
     textarea::placeholder {
         padding: .5em;
     }
+    && > p {
+        font-size: 1.2em;
+        text-align:center;
+        margin: .5em 0;
+    }
 `;
 
 function Textarea(props) {

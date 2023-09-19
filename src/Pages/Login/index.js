@@ -8,7 +8,6 @@ const ContainerFormularioLoginStyled = styled.div`
 
 function Login() {
 
-
     return (
         <ContainerFormularioLoginStyled>
             <FormularioLogin />
