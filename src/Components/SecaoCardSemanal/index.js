@@ -12,6 +12,7 @@ const SectionCardapioSemanalStyled = styled.section`
     padding: 0 1em;
     height: 90vh;
     overflow: auto;
+    background-color: var(--color-secondary);
 
     && a {
         display: inline-block;
@@ -28,7 +29,7 @@ const SectionCardapioSemanalStyled = styled.section`
 @media screen and (min-width: 900px) {
     && {
         align-items: flex-end;
-        height: 85vh;
+        height: 87vh;
         padding: 1.6em;
     }
     && a {

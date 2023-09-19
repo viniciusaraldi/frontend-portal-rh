@@ -12,17 +12,27 @@ const SectionFeedbackStyled = styled.section`
         padding: 1em;
         background-color: var(--color-primary);
     }
-
     && > div  button[data-valuebtn="button"] {
         width: 96%;
     }
-
     .disable {
         opacity: 0;
     }
     .active {
         display: inline-block;
         opacity: 1;
+    }
+
+        @media screen and (min-width: 800px) {
+            && > div {
+                display: flex;
+                justify-content: space-between;
+            }
+            && > div  button[data-valuebtn="button"] {
+                width: 30%;
+                font-size: 2em;
+                text-align: center
+            }
     }
 `;
 
@@ -34,8 +44,10 @@ function Feedback() {
         localStorage.getItem("token") === 'false' || localStorage.getItem("token") === null ? setAutorizacao(false) : setAutorizacao(true)
     },[] )
 
-    const handleAlteraVisão = () => {
-        setValidaFeedback(!validaFeedback)
+    const handleAlteraVisão = (e) => {
+        if (e.target.type === 'button') {
+            setValidaFeedback(!validaFeedback)
+        }
     }
     
     return (
@@ -46,7 +58,8 @@ function Feedback() {
                     <ButtonSubmit
                         type="button"
                         valueBtn="button"
-                        valueText="Digite seu Feedback:"
+                        valueText="Escreva seu Feedback:"
+                        paddingValue="0.5em 0.2em"
                     />
                 </div>
                 <FeedbackEnvia />
@@ -59,7 +72,8 @@ function Feedback() {
                             <ButtonSubmit
                                 type="button"
                                 valueBtn="button"
-                                valueText="Digite seu Feedback:"
+                                valueText="Escreva seu Feedback:"
+                                paddingValue="0.5em 0.2em"
                             />
                         </div>
                         <FeedbackEnvia />
@@ -71,6 +85,7 @@ function Feedback() {
                                     type="button"
                                     valueBtn="button"
                                     valueText="Feedbacks Enviados:"
+                                    paddingValue="0.5em 0.2em"
                                 />
                         </div>
                         <FeedbackMostra />

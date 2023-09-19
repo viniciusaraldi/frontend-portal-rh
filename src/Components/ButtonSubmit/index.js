@@ -12,7 +12,7 @@ import styled from "styled-components";
         margin: ${props => props.margin ? props.margin : "0 .5em"};
 
         &&:hover, &&:active {
-            border: 1px solid var(--color-primary);
+            border: 2px solid var(--color-primary);
         }
         @media screen and (min-width: 900px) {
             && {

@@ -30,7 +30,6 @@ const ContainerFeedbackMostraStyled = styled.div`
         border-radius: 20px;
         position: relative;
     }
-
     .overflow ul li button {
         width: auto;
         position: absolute;
@@ -63,16 +62,41 @@ const ContainerFeedbackMostraStyled = styled.div`
         margin: 0 auto;
     } 
     button[type="button"] {
-        background-color: var(--color-secondary);
-        margin: 0.5em 0;
-        padding: 0.5em 0em;
         box-shadow: -4px 4px 0px 0px var(--color-primary);
         cursor: pointer;
         text-transform: uppercase;
         width: 100px;
         height: 40px;
         border-radius: 10px;
-        border: 2px solid var(--color-primary);
+    }
+
+    @media screen and (min-width: 800px) {
+        div.ContainerCategoriaLogado {
+            display: flex;
+            justify-content: center;
+        }
+        .overflow ul {
+            display: flex;
+            width: 80%;
+            margin: 0;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        .overflow ul li {
+            margin: 1em 0.5em;
+            width: 30%;
+            flex-wrap: wrap;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .overflow ul li > p {
+            margin: .5em 0 1em;
+        }
+        .overflow ul li button {
+            top: 18px;
+            right: 15px;
+        }
     }
 `;
 
@@ -102,8 +126,7 @@ function FeedbackMostra() {
     }
 
     const handleSeparaCategorias = (e) => {
-        setFeedFiltrados(feedEnviados.filter((item) => item.categorias === e.target.dataset.valuebtn.toUpperCase()))
-
+        if (e.target.type === 'button') setFeedFiltrados(feedEnviados.filter((item) => item.categorias === e.target.dataset.valuebtn.toUpperCase()))
     }
 
     return (
@@ -115,8 +138,10 @@ function FeedbackMostra() {
                         {opcoes.map((opcao) => (
                             <ButtonSubmit
                                 type="button"
+                                backcolor="var(--color-secondary)"
                                 valueBtn={opcao}
                                 valueText={opcao}
+                                marginValue="1em 1em"
                                 paddingValue=".5em 0"
                                 borderColor="var(--color-primary)"
                                 key={opcoes.indexOf(opcao)}
@@ -131,6 +156,7 @@ function FeedbackMostra() {
                                     <ButtonSubmit
                                         type="button"
                                         valueBtn={feed._id}
+
                                         valueText={(<i data-valuebtn={feed._id} className="fa-solid fa-xmark"></i>)}
                                     />
                                 </li>

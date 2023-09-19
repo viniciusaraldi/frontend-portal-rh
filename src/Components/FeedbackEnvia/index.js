@@ -60,16 +60,28 @@ const ContainerFeedbackStyled = styled.section`
         && {
             flex-direction: row;
             justify-content: space-around;
+            height: 70vh;
+            padding: 0;
         }
         .labelCategoria {
             display: flex;
             align-items:center;
         }
+        .selecionarCategoria {
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+            align-items: center;
+        }
+        && .selecionarCategoria > p {
+            font-size: 1.5em;
+            margin: 0 1em 0 -1em;
+        }
     }
 `;
 
 function FeedbackEnvia() {
-    const [categoriaSelecionada, setCategoriaSelecionada] = useState("")
+    const [categoriaSelecionada, setCategoriaSelecionada] = useState('')
     const [texto, setTexto] = useState("")
     const categoriaFeedback = ['sugestão', 'elogio', 'critica'];
 
@@ -83,7 +95,7 @@ function FeedbackEnvia() {
 
     const handleClickCategoriaSelecionada = (e) => {
         e.preventDefault()
-        const categoria = e.target.outerText
+        const categoria = e.target.innerText
         setCategoriaSelecionada(categoria)
     }
     
@@ -92,21 +104,20 @@ function FeedbackEnvia() {
         setTexto(textoEscrito)
     }
 
-    const handleDesabled = () => {
-        setCategoriaSelecionada("")
+    const handleDesabled = (e) => {
+        setCategoriaSelecionada('')
     }
 
     return (
         <ContainerFeedbackStyled>
             <form className="formularioFeedback" onSubmit={handleGeraRequisicao}>
                 <label htmlFor="categoria" className="labelCategoria">
-                    {
-                    categoriaSelecionada.length === 0 ? (
+                    {categoriaSelecionada === '' ? (
                         <div className="selecionarCategoria" >
                             <p>Selecione uma categoria: </p>
                             <div>
                                 {categoriaFeedback.map((categoria) => (
-                                    <button id="categoria" type="button" className={categoriaSelecionada.length === 0 ? "active" : "disable"} name="categoria" key={categoria} onClick={handleClickCategoriaSelecionada}>{categoria}</button>
+                                    <button type="button" className={categoriaSelecionada === '' ? "active categoria" : "disable categoria"} name="categoria" key={categoria} onClick={handleClickCategoriaSelecionada}>{categoria}</button>
                                 ))}
                             </div>
                         </div>
@@ -126,7 +137,7 @@ function FeedbackEnvia() {
                     }
                     
                 </label>
-                <div className={categoriaSelecionada.length === 0 ? "disable" : "active "} onChange={handleText}>
+                <div className={categoriaSelecionada === '' ? "disable" : "active "} onChange={handleText}>
                     <Textarea  
                         titulo="Envie-nos uma mensagem:"
                         name="feedback"

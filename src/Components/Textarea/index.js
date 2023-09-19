@@ -19,6 +19,20 @@ const TextareaStyled = styled.label`
         text-align:center;
         margin: .5em 0;
     }
+    
+    @media screen and (min-width: 800px) {
+        && {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: .5em 0;
+        }
+        && textarea {
+            margin: 0 auto;
+            width: 80vw;
+            height: 200px;
+        }
+    }
 `;
 
 function Textarea(props) {

@@ -19,6 +19,7 @@ const FormularioLoginStyled = styled.form`
     border-radius: 20px;
     box-shadow: 5px 10px 0px var(--color-primary);
     position: relative;
+    background-color: var(--color-secondary);
 
     && h2 {
         padding: 1em;
@@ -51,11 +52,18 @@ const FormularioLoginStyled = styled.form`
             gap: .5em;
             padding: 0;
             margin: .5em auto;
-            width: 50%;
+            width: 40%;
+            height: 80vh;
         }
         && a {
             width: 100%;
             margin-bottom: .5em;
+        }
+        && > div > button {
+            width: auto;
+            border: 1px solid transparent;
+            top: 18px;
+            right: 50px;
         }
     }
 `;

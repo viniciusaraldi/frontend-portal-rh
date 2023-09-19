@@ -39,7 +39,7 @@ const GlobalStyle = createGlobalStyle`
       width: 100%;
     }
     body {
-      background-color: var(--color-secondary);
+      background-color: var(--color-primary);
       font-family: var(--font-primary);
       font-size: 16px;
       font-weight: 400;
