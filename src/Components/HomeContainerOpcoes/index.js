@@ -9,14 +9,14 @@ import fundoNatura from '../../assets/images/fundoNatura.webp'
         a {
             display: inline-block;
             height: auto;
-            width: 100%;
+            width: 372px;
             margin: 0 0 1em;
         }
         
         @media screen and (min-width: 800px) {
             && {
                 width: 90vw;
-                margin: 0 3em;
+                margin: 1em 3em 0;
             }
 
             a {
@@ -26,6 +26,13 @@ import fundoNatura from '../../assets/images/fundoNatura.webp'
             }
             a:hover {
                 padding: .5em;
+            }
+        }
+        
+        @media screen and (min-width: 1400px) {
+            a {
+                width: 650px;
+                height: 350px;
             }
         }
     `;

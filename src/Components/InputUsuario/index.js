@@ -24,22 +24,29 @@ const LabelStyled = styled.label`
         color: var(--color-thirty);
     }
 
-    @media screen and (min-width: 900px) {
-            && {
-                justify-content: center;
-            }
-            && > input {
-                width: 90%;
-                padding: .5em 0;
-            }
+    @media screen and (min-width: 800px) {
+        && {
+            justify-content: center;
         }
+        && > input {
+            width: 90%;
+            padding: .5em 0;
+        }
+    }
+
+    @media screen and (min-width: 1400px) {
+        && > input {
+            width: 70%;
+            padding: 1em 0;
+        }
+    }
 `;
 
 function InputUsuario(props) {
 
     return (
         <LabelStyled htmlFor={props.label}>
-            <input type={props.type} name={props.label} id={props.label} placeholder={props.placeholder} required autoComplete="current-password"/>
+            <input data-typebtn={props.typeBtn} type={props.type} name={props.label} id={props.label} placeholder={props.placeholder} required autoComplete="current-password"/>
         </LabelStyled>
     )
 }

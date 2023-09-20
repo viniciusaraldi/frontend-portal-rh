@@ -8,72 +8,81 @@ import buscaCardapioPorId from "../../services/Cardapios/buscaCardapioId.js"
 import deletaCardapio from "../../services/Cardapios/deletaCardapio.js"
 
 const SectionCardapioDiarioStyled = styled.section`
+    background: var(--color-secondary);
+    height: 91vh;
+    overflow-y: hidden;
 
-.ordemCardapio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.ContainerBtnAtualizaEDeleta {
-    display: flex;
-    justify-content: space-between;
-    width: 250px;
-    padding: 1em;
-    margin-top: 2em;
-}
-.containerDadosAPI {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.containerDadosAPIEstilo {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    margin: 1em;
-}
-.concontainerDadosAPIEstiloInfos {
-    width: auto;
-    height: auto;
-    box-shadow: -15px 20px 5px var(--color-primary);
-    margin: .5em 1em;
-    padding: 1em;
-    border: 2px solid var(--color-primary);
-    border-radius: 20px;
-    text-align: start;
-    position: relative;
-}
-.containerDadosAPIEstiloDate {
-    text-align: center;
-    background: var(--color-primary);
-    width: 70%;
-    margin: 1em auto;
-    border-radius: 20px;
-    position: relative;
-}
-.containerDadosAPIEstiloDate button, .concontainerDadosAPIEstiloInfos button {
-    background: var(--color-primary);
-    padding: .3em;
-    border: 1px solid;
-    border-radius: 20px;
-    position: absolute;
-    top: -15px;
-    right: -10px;
-}
-.containerDadosAPIEstiloLista {
-    width: auto;
-    font-size: 1.3em;
-    margin: .3em .5em;
-}
-.containerDadosAPIEstiloLista.active {
-    display: flex;
-}
-.containerDadosAPIEstiloLista.disable {
-    display: none;
-}
-`;
+    .ordemCardapio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .ContainerBtnAtualizaEDeleta {
+        display: flex;
+        justify-content: space-between;
+        width: 250px;
+        padding: 1em;
+        margin-top: 2em;
+    }
+    .containerDadosAPI {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .containerDadosAPIEstilo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        margin: 1em;
+    }
+    .concontainerDadosAPIEstiloInfos {
+        width: auto;
+        height: auto;
+        box-shadow: -15px 20px 5px var(--color-primary);
+        margin: .5em 1em;
+        padding: 1em;
+        border: 2px solid var(--color-primary);
+        border-radius: 20px;
+        text-align: start;
+        position: relative;
+    }
+    .containerDadosAPIEstiloDate {
+        text-align: center;
+        background: var(--color-primary);
+        width: 70%;
+        margin: 1em auto;
+        border-radius: 20px;
+        position: relative;
+    }
+    .containerDadosAPIEstiloDate button, .concontainerDadosAPIEstiloInfos button {
+        background: var(--color-primary);
+        padding: .3em;
+        border: 1px solid;
+        border-radius: 20px;
+        position: absolute;
+        top: -15px;
+        right: -10px;
+    }
+    .containerDadosAPIEstiloLista {
+        width: auto;
+        font-size: 1.3em;
+        margin: .3em .5em;
+    }
+    .containerDadosAPIEstiloLista.active {
+        display: flex;
+    }
+    .containerDadosAPIEstiloLista.disable {
+        display: none;
+    }
+
+    @media screen and (min-width: 800px) {
+        .containerDadosAPIEstiloDate button, .concontainerDadosAPIEstiloInfos button {
+            cursor: pointer;
+        }
+    }
+    `;
 
 const ContainerCardapioStyled = styled.div`
     display: flex;

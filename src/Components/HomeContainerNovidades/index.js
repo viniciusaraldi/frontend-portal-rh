@@ -9,8 +9,12 @@ const HomeContainerNovidadesStyled = styled.div`
     align-items: flex-start;
     justify-content: space-around;
     height: 404px;
+    width: 90%;
     padding: 1em;
-    background-color: var(--color-primary);
+    margin: 1em 1.5em 0;
+    border-radius: 20px;
+    background-color: var(--color-secondary);
+    overflow-y: auto;
 
     h2 {
         margin: -2em 0;
@@ -22,6 +26,13 @@ const HomeContainerNovidadesStyled = styled.div`
             height: 83vh;
             width: 130%;
             border-top-right-radius: 20px;
+        }
+    }
+
+    
+    @media screen and (min-width: 1400px) {
+        && {
+            height: 80vh;
         }
     }
 `;

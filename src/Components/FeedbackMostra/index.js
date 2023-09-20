@@ -71,9 +71,15 @@ const ContainerFeedbackMostraStyled = styled.div`
     }
 
     @media screen and (min-width: 800px) {
+        && {
+            height: 85vh;
+        }
+        && > div {
+            width: 98%;
+        }
         div.ContainerCategoriaLogado {
             display: flex;
-            justify-content: center;
+            justify-content: space-evenly;
         }
         .overflow ul {
             display: flex;
@@ -96,6 +102,9 @@ const ContainerFeedbackMostraStyled = styled.div`
         .overflow ul li button {
             top: 18px;
             right: 15px;
+        }
+        button[type="button"] {
+            width: 120px;
         }
     }
 `;
@@ -141,8 +150,8 @@ function FeedbackMostra() {
                                 backcolor="var(--color-secondary)"
                                 valueBtn={opcao}
                                 valueText={opcao}
-                                marginValue="1em 1em"
-                                paddingValue=".5em 0"
+                                marginValue="1em 0em"
+                                paddingValue=".5em .5em"
                                 borderColor="var(--color-primary)"
                                 key={opcoes.indexOf(opcao)}
                             />
@@ -156,7 +165,6 @@ function FeedbackMostra() {
                                     <ButtonSubmit
                                         type="button"
                                         valueBtn={feed._id}
-
                                         valueText={(<i data-valuebtn={feed._id} className="fa-solid fa-xmark"></i>)}
                                     />
                                 </li>

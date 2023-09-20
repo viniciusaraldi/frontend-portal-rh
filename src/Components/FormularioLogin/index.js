@@ -47,13 +47,14 @@ const FormularioLoginStyled = styled.form`
         position: absolute;
         color: transparent;
     }
-    @media screen and (min-width: 900px) {
+
+    @media screen and (min-width: 800px) {
         && {
             gap: .5em;
             padding: 0;
             margin: .5em auto;
             width: 40%;
-            height: 80vh;
+            height: 83vh;
         }
         && a {
             width: 100%;
@@ -64,6 +65,18 @@ const FormularioLoginStyled = styled.form`
             border: 1px solid transparent;
             top: 18px;
             right: 50px;
+        }
+    }
+
+    @media screen and (min-width: 1400px) {
+        && {
+           justify-content: space-evenly;
+           height: 88vh;
+        }
+        && > div > button {
+            top: 27px;
+            right: 120px;
+            padding: .5em;
         }
     }
 `;

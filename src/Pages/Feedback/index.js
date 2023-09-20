@@ -59,7 +59,7 @@ function Feedback() {
                         type="button"
                         valueBtn="button"
                         valueText="Escreva seu Feedback:"
-                        paddingValue="0.5em 0.2em"
+                        paddingValue="1em 0.2em"
                     />
                 </div>
                 <FeedbackEnvia />
@@ -73,7 +73,7 @@ function Feedback() {
                                 type="button"
                                 valueBtn="button"
                                 valueText="Escreva seu Feedback:"
-                                paddingValue="0.5em 0.2em"
+                                paddingValue="1em 0.2em"
                             />
                         </div>
                         <FeedbackEnvia />
@@ -85,7 +85,7 @@ function Feedback() {
                                     type="button"
                                     valueBtn="button"
                                     valueText="Feedbacks Enviados:"
-                                    paddingValue="0.5em 0.2em"
+                                    paddingValue="1em 0.2em"
                                 />
                         </div>
                         <FeedbackMostra />

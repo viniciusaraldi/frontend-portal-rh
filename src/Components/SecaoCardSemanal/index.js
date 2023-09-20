@@ -26,21 +26,32 @@ const SectionCardapioSemanalStyled = styled.section`
         position: relative;
     }
 
-@media screen and (min-width: 900px) {
-    && {
-        align-items: flex-end;
-        height: 87vh;
-        padding: 1.6em;
+    @media screen and (min-width: 800px) {
+        && {
+            align-items: flex-end;
+            height: 87vh;
+            padding: 0 1.6em 1.6em;
+        }
+        && a {
+            width: 100%;
+            height: 390px;
+            transition: .2s all;
+        }
+        && a:hover {
+            background-color: var(--color-primary);
+            color: var(--color-thirty);
+        }
     }
-    && a {
-        width: 340px;
-        transition: .2s all;
+
+    @media screen and (min-width: 1400px) {
+        && {
+            align-items: center;
+        }
+        && a {
+            height: 400px;
+            padding: 1em 1.5em;
+        }
     }
-    && a:hover {
-        background-color: var(--color-primary);
-        color: var(--color-thirty);
-    }
-}
 `;
 
 function SecaoCardSemanal() {

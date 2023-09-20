@@ -4,7 +4,7 @@ const HomeCanalStyled = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 356px;
+    width: 100%;
     height: 150px;
     padding: 1em 0;
     border-radius: 20px;

@@ -10,11 +10,12 @@ import styled from "styled-components";
         cursor: pointer;
         border-radius: 20px;
         margin: ${props => props.margin ? props.margin : "0 .5em"};
+        color: var(--color-thirty);
 
         &&:hover, &&:active {
             border: 2px solid var(--color-primary);
         }
-        @media screen and (min-width: 900px) {
+        @media screen and (min-width: 800px) {
             && {
                 width: 40%;
             }

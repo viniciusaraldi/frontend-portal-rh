@@ -12,7 +12,7 @@ const SelectStyled = styled.select`
     text-transform: uppercase;
     border: 2px solid var(--color-primary);
 
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 800px) {
             && {
                 width: 40%;
                 cursor: pointer;
@@ -35,7 +35,6 @@ function SelectRole() {
 
     return (
         <SelectStyled>
-            {/* <option>Selecione um Cargo Para Continuar</option> */}
             {roles.map((role) => (
                 <option key={role._id} value={role.role}>{role.role}</option>
             ))}

@@ -21,7 +21,7 @@ const ContainerDiaSemanaStyled = styled.div`
         top: -30%;
     }
 
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 800px) {
         && {
             height: auto;
             justify-content: flex-start;
@@ -29,6 +29,23 @@ const ContainerDiaSemanaStyled = styled.div`
             width: 170px;
             margin: 0 .5em;
         }
+        && > ul li { 
+            width: 175px;
+        }
+    }
+
+    @media screen and (min-width: 1400px) {
+        && {
+            height: auto;
+            justify-content: flex-start;
+            align-items: center;
+            width: 170px;
+            margin: 0 .5em;
+        }
+        && > ul li { 
+            width: 200px;
+        }
+    }
 `;
 
 

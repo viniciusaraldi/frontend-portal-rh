@@ -56,11 +56,11 @@ const ContainerFeedbackStyled = styled.section`
         display: flex;
         flex-direction: column;
     }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 800px) {
         && {
             flex-direction: row;
             justify-content: space-around;
-            height: 70vh;
+            height: 65vh;
             padding: 0;
         }
         .labelCategoria {
@@ -76,6 +76,11 @@ const ContainerFeedbackStyled = styled.section`
         && .selecionarCategoria > p {
             font-size: 1.5em;
             margin: 0 1em 0 -1em;
+        }
+    }
+    @media screen and (min-width: 1400px) {
+        && {
+            height: 76vh;
         }
     }
 `;
@@ -113,7 +118,7 @@ function FeedbackEnvia() {
             <form className="formularioFeedback" onSubmit={handleGeraRequisicao}>
                 <label htmlFor="categoria" className="labelCategoria">
                     {categoriaSelecionada === '' ? (
-                        <div className="selecionarCategoria" >
+                        <div className="selecionarCategoria" id="categoria">
                             <p>Selecione uma categoria: </p>
                             <div>
                                 {categoriaFeedback.map((categoria) => (
@@ -127,7 +132,7 @@ function FeedbackEnvia() {
                                 type="button"
                                 valueText={`Categoria Selecionada: ${categoriaSelecionada}`}
                                 valueBtn="button"
-                                paddingValue="0.5em 0"
+                                paddingValue="0.5em"
                                 marginValue="0 auto"
                                 fontValue="1.2em"
                                 borderColor="var(--color-primary)"
@@ -149,6 +154,7 @@ function FeedbackEnvia() {
                         valueBtn="submit"
                         valueText="Enviar"
                         backcolor="var(--color-primary)"
+                        marginValue="auto"
                     />
                 </div>
 

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import HomeContainerNovidades from '../../Components/HomeContainerNovidades';
 import HomeContainerOpcoes from '../../Components/HomeContainerOpcoes';
 
-const HomeStyled = styled.div`
+const HomeStyled = styled.section`
     display: flex;
     flex-direction: column;
 
@@ -11,6 +11,12 @@ const HomeStyled = styled.div`
             flex-direction: row-reverse;
             align-items: flex-start;
             width: 100vw;
+        }
+    }
+
+    @media screen and (min-width: 1400px) {
+        && {
+            margin: 2em 0;
         }
     }
 `;

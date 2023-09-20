@@ -31,6 +31,15 @@ const TextareaStyled = styled.label`
             margin: 0 auto;
             width: 80vw;
             height: 200px;
+            background-color: var(--color-primary);
+            color: var(--color-thirty);
+            padding: 1em;
+        }
+    }
+    
+    @media screen and (min-width: 1000px) {
+        && textarea {
+            height: 50vh;
         }
     }
 `;
