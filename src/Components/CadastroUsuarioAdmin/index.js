@@ -75,6 +75,7 @@ function CadastroUsuarioAdmin() {
             <ButtonSubmit 
                 type="submit"
                 valueText="Enviar"
+                backColor="var(--color-primary)"
             />
         </FormularioReseteSenhaStyled>
     )

@@ -23,7 +23,7 @@ const FormularioReseteSenhaStyled = styled.form`
 
     && div button[type="button"] {
         position: absolute;
-        top: 25px;
+        top: 16px;
         right: 15px;
         padding: .5em;
         z-index: 2;

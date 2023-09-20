@@ -37,7 +37,7 @@ const FormularioLoginStyled = styled.form`
     }
     && > div > button {
         position: absolute;
-        top: 32px;
+        top: 22px;
         right: 10px;
     }
     #error-input {

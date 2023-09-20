@@ -20,7 +20,7 @@ const HeaderOpcoesStyled = styled.div`
         right: 0;
         transform: translate(0%, 0%);
         transition: .2s all;
-        z-index: 2;
+        z-index: 99;
         height: 100vh;
         width: calc(100vw - 4em);
         background-color: var(--color-primary);
