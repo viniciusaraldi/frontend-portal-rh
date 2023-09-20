@@ -123,7 +123,7 @@ function FormularioLogin() {
                 <ButtonSubmit
                     type="button"
                     backcolor="transparent"
-                    borderValue="none"
+                    borderValue="transparent"
                     paddingValue="0"
                     valueText={<i className="fa-regular fa-eye-slash"></i>}
                 />

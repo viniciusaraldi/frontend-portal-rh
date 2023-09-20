@@ -103,7 +103,7 @@ function ResetaSenhaUsuario() {
                 <ButtonSubmit
                     type="button"
                     backcolor="transparent"
-                    borderValue="none"
+                    borderValue="transparent"
                     paddingValue="0"
                     valueBtn="visivel"
                     valueText={<i data-valuebtn="visivel" className="fa-regular fa-eye-slash"></i>}
@@ -119,7 +119,7 @@ function ResetaSenhaUsuario() {
                 <ButtonSubmit
                     type="button"
                     backcolor="transparent"
-                    borderValue="none"
+                    borderValue="transparent"
                     paddingValue="0"
                     valueBtn="visivel"
                     valueText={<i data-valuebtn="visivel" className="fa-regular fa-eye-slash"></i>}
