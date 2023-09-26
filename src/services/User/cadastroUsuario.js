@@ -1,7 +1,7 @@
 import { baseUrl } from "../baseUrl.js";
 import buscaRole from "../Role/buscaRole.js";
 
-async function cadastroUsuarioAdminApi(usuario, password, role) {
+async function cadastroUsuarioAdminApi(usuario, password, role, token) {
     
     const dadosRole = await buscaRole()
     const roleVerifica = await dadosRole
@@ -24,7 +24,8 @@ async function cadastroUsuarioAdminApi(usuario, password, role) {
                 role: role
             }),
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "Authorization": "Bearer " + token
             }
         });
         const dadosEnvio = await dados.json()

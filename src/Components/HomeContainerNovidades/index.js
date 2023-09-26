@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { funcoesNovidades } from '../../services/Novidades';
+import requisicaoNovidadesGet from '../../services/Novidades';
 
 const HomeContainerNovidadesStyled = styled.div`
     display: flex;
@@ -46,9 +46,10 @@ function HomeContainerNovidades() {
 
 
     async function geraRequisicaoNovidades() {
-        const data = await funcoesNovidades.requisicaoNovidadesGet();
+        const data = await requisicaoNovidadesGet();
         setNovidades(data.message)
     }
+    console.log(novidades)
 
     return (
         <HomeContainerNovidadesStyled>

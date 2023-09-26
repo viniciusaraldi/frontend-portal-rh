@@ -11,6 +11,4 @@ async function requisicaoNovidadesGet() {
 }
 
 
-export const funcoesNovidades = {
-    requisicaoNovidadesGet
-}
+export default requisicaoNovidadesGet

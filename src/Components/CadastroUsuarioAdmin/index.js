@@ -3,6 +3,7 @@ import ButtonSubmit from '../ButtonSubmit/index.js'
 import InputUsuario from '../InputUsuario/index.js'
 import SelectRole from '../SelectRole/index.js'
 import styled from 'styled-components'
+import { useEffect, useState } from 'react'
 
 const FormularioReseteSenhaStyled = styled.form`
     width: 100%;
@@ -46,6 +47,11 @@ const FormularioReseteSenhaStyled = styled.form`
 `;
 
 function CadastroUsuarioAdmin() {
+    const [token, setToken] = useState("");
+
+    useEffect (() => {
+        setToken(localStorage.getItem("token") ? localStorage.getItem("token") : "false")
+    }, [])
 
     const handleSubmit = async e => {
         e.preventDefault()
@@ -53,7 +59,11 @@ function CadastroUsuarioAdmin() {
         const password = (e.target[1].value)
         const role = e.target[2].value
         try {
-            await cadastroUsuarioAdminApi(usuario, password, role)
+            if (token === "false") {
+                alert("Erro ao fazer cadastro, você precisa logar para cadastrar uma conta!")
+                return false
+            }
+            await cadastroUsuarioAdminApi(usuario, password, role, token)
             return window.location.href = "/";
         } catch (err) {
             alert("Erro ao fazer cadastro, entre em contato com o TI")
