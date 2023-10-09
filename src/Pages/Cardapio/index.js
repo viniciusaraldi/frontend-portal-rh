@@ -213,11 +213,11 @@ function Cardapio() {
                                             backgroundColor="#5cb85c"
                                             value="Confirmar"
                                         />
-                                        <ButtonOpcoesRefeicao
+                                        {/* <ButtonOpcoesRefeicao
                                             datavalue="Excluir"
                                             backgroundColor="#d9534f"
                                             value="Excluir"
-                                        />
+                                        /> */}
                                     </div>
                                 </ul>
                             </div>
