@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import HomeContainerNovidades from '../../Components/HomeContainerNovidades';
+// import HomeContainerNovidades from '../../Components/HomeContainerNovidades';
 import HomeContainerOpcoes from '../../Components/HomeContainerOpcoes';
 
 const HomeStyled = styled.section`
@@ -25,7 +25,7 @@ function Home() {
     return (
         <HomeStyled>
             <HomeContainerOpcoes />
-            <HomeContainerNovidades />
+            {/* <HomeContainerNovidades /> */}
         </HomeStyled>
     )
 }

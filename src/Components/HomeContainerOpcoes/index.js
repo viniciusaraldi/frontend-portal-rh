@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import OpcoesHome from '../OpcoesHome';
-import fundoFeedback from '../../assets/images/fundoFeedback.webp'
+// import fundoFeedback from '../../assets/images/fundoFeedback.webp'
 import fundoNatura from '../../assets/images/fundoNatura.webp'
 
     const HomeContainerOpcoesStyled = styled.div`
@@ -41,11 +41,11 @@ function HomeContainerOpcoes() {
 
     return (
         <HomeContainerOpcoesStyled>
-             <OpcoesHome 
+             {/* <OpcoesHome 
                     to="/feedback"
                     image={fundoFeedback}
                     text="Deixe seu feedback conosco!"
-                />
+                /> */}
                 <OpcoesHome 
                     to="/restaurante"
                     image={fundoNatura}

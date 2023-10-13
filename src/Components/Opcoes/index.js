@@ -76,7 +76,8 @@ const HeaderOpcoesStyled = styled.div`
 function Opcoes() {
     const [activeBars, setActiveBars] = useState(false)
 
-    const opcoes = ['Restaurante','Feedback']
+    // 'Feedback'
+    const opcoes = ['Restaurante']
 
     const handleAtivaBars = () => {
         setActiveBars(!activeBars)

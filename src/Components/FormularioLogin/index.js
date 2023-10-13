@@ -118,7 +118,7 @@ function FormularioLogin() {
                 <InputUsuario
                     label="Senha"
                     placeholder="SENHA"
-                    type={typeInput ? "password" : "text"}
+                    type={typeInput ? "text" : "password"}
                 />
                 <ButtonSubmit
                     type="button"

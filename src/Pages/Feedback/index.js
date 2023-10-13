@@ -52,7 +52,7 @@ function Feedback() {
     
     return (
        <SectionFeedbackStyled>
-            {!autorizacao ? (
+            {!autorizacao || autorizacao === false ? (
             <>
                 <div onClick={handleAlteraVisão}>
                     <ButtonSubmit
