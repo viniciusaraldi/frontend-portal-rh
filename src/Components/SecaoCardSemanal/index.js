@@ -17,7 +17,7 @@ const SectionCardapioSemanalStyled = styled.section`
     && a {
         display: inline-block;
         width: 100%;
-        height: 375px;
+        height: 455px;
         box-shadow: -15px 20px 5px var(--color-primary);
         margin: 0 2em;
         padding: 1em 0;

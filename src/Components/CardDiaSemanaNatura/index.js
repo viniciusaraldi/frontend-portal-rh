@@ -6,7 +6,7 @@ const ContainerDiaSemanaStyled = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    width: 200px;
+    width: 216px;
     padding: 0.5em;
     font-size: 1.5em;
     cursor: pointer;
