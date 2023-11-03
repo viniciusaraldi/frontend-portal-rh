@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react"
+import React, { Suspense, useEffect, useState } from "react"
 import { Link } from 'react-router-dom'
 import styled from "styled-components"
 import buscaCardapio from "../../services/Cardapios/buscaCardapio.js"
-import CardDiaSemanaNatura from "../CardDiaSemanaNatura"
+//import CardDiaSemanaNatura from "../CardDiaSemanaNatura"
+
+const CardDiaSemanaNatura = React.lazy(() => import("../CardDiaSemanaNatura"));
 
 const SectionCardapioSemanalStyled = styled.section`
     display: flex;
@@ -70,11 +72,14 @@ function SecaoCardSemanal() {
         <SectionCardapioSemanalStyled>
             {cardapios.map((cardapio) => (
                 <Link to={cardapio._id} key={cardapio._id}>
-                    <CardDiaSemanaNatura
+                    <Suspense fallback={<div>Carregando...</div>}>
+                        <CardDiaSemanaNatura key={cardapio._id} diaSemanal={cardapio.data} refeicao={cardapio.cardapio} />
+                    </Suspense>
+                    {/* <CardDiaSemanaNatura
                         key={cardapio._id}
                         diaSemanal={cardapio.data}
                         refeicao={cardapio.cardapio}
-                    />
+                    /> */}
                 </Link>
             ))}
         </SectionCardapioSemanalStyled>
