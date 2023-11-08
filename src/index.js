@@ -17,6 +17,7 @@ import Login from './Pages/Login';
 import CadastroUsuarioAdmin from './Components/CadastroUsuarioAdmin';
 import SecaoCardSemanal from './Components/SecaoCardSemanal';
 import ResetaSenhaUsuario from './Pages/ResetaSenhaUsuario';
+import Calculadora from './Pages/Calculadora';
 
 const ComponentHeader = React.lazy(() => import('./Components/Header'))
 const GlobalStyle = createGlobalStyle`
@@ -73,6 +74,7 @@ root.render(
           <Route path='/login' element={<Login />} />
           <Route path='/resete-password' element={<ResetaSenhaUsuario />} />
           <Route path='/cadastro-usuario-admin' element={<CadastroUsuarioAdmin />} />
+          <Route path='/calculadora' element={<Calculadora />} />
           <Route path='*' element={<NotPageFound />} />
         </Routes>
         <GlobalStyle />

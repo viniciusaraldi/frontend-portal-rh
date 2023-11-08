@@ -75,11 +75,6 @@ function SecaoCardSemanal() {
                     <Suspense fallback={<div>Carregando...</div>}>
                         <CardDiaSemanaNatura key={cardapio._id} diaSemanal={cardapio.data} refeicao={cardapio.cardapio} />
                     </Suspense>
-                    {/* <CardDiaSemanaNatura
-                        key={cardapio._id}
-                        diaSemanal={cardapio.data}
-                        refeicao={cardapio.cardapio}
-                    /> */}
                 </Link>
             ))}
         </SectionCardapioSemanalStyled>
