@@ -89,6 +89,7 @@ const FormsStyled = styled.form`
 const DivButtonCountStyled = styled.div`
     display: flex;
     margin: 0 5em;
+    z-index: 2;
 
     @media screen and (max-width: 500px) {
         && {
