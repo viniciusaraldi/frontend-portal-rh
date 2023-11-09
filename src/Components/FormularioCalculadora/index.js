@@ -89,13 +89,14 @@ const FormsStyled = styled.form`
 const DivButtonCountStyled = styled.div`
     display: flex;
     margin: 0 5em;
-    z-index: 2;
+
 
     @media screen and (max-width: 500px) {
         && {
             margin: 0 auto;
             display: flex;
             align-items: center;    
+            z-index: 1;
         }
     }
 `;
@@ -107,6 +108,7 @@ const DivFormsStyled = styled.div`
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    z-index: 2;
 
     && button {
         margin: 0.2em 0;
