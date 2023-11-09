@@ -35,7 +35,7 @@ const FormsStyled = styled.form`
     #contagem {
         width: 50px;
         height: 50px;
-        text-align: end;
+        text-align: center;
         border-radius: 20px;
         border: 2px solid #c6c6c6;
     }
@@ -68,6 +68,35 @@ const FormsStyled = styled.form`
         border: none;
         cursor: pointer;
     }
+
+    @media screen and (max-width: 500px) {
+        && {
+            width: 90%;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        && label {
+            padding: .5em;
+        }
+        #setor {
+            width: 130%;
+            margin-left: auto;
+        }  
+    }
+`;
+
+const DivButtonCountStyled = styled.div`
+    display: flex;
+    margin: 0 5em;
+
+    @media screen and (max-width: 500px) {
+        && {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;    
+        }
+    }
 `;
 
 const DivFormsStyled = styled.div`
@@ -85,6 +114,10 @@ const DivFormsStyled = styled.div`
         width: 100%;
         cursor: pointer;
         border: 1px solid #c6c6c6;
+    }
+
+    @media screen and (max-width: 500px) {
+
     }
 `;
 
@@ -181,22 +214,26 @@ function FormularioCalculadora() {
                     required='required'
                 />
             </label>
-            <button type='button' className='buttonContagem' onClick={handleClickButtonCount}><i className="fa-solid fa-circle-plus"></i></button>
-            <label htmlFor='contagem' className='contagem'>
-                <Input 
-                    type="number"
-                    placeholder=""
-                    id="contagem"
-                    name="contagem"
-                    disabled="disabled"
-                    value={count}
-                />
-            </label>
-            <button type='button' className='buttonContagem' onClick={handleClickButtonCountMenos}><i className="fa-solid fa-minus"></i></button>
+            <DivButtonCountStyled>
+                <button type='button' className='buttonContagem' onClick={handleClickButtonCount}><i className="fa-solid fa-circle-plus"></i></button>
+                <label htmlFor='contagem' className='contagem'>
+                    <Input 
+                        type="number"
+                        placeholder=""
+                        id="contagem"
+                        name="contagem"
+                        disabled="disabled"
+                        value={count}
+                    />
+                </label>
+                <button type='button' className='buttonContagem' onClick={handleClickButtonCountMenos}><i className="fa-solid fa-minus"></i></button>
+            </DivButtonCountStyled>
+
             <ButtonSubmit 
                 valueText="Confirmar"
                 type="submit"
                 backcolor="#4BB543"
+                marginValue="0 auto"
             />
         </FormsStyled>
     )

@@ -9,6 +9,7 @@ const DivCalculadoraStyled = styled.div`
 
 const TituloStyled = styled.h2`
     text-transform: uppercase;
+    text-align: center;
 `;
 
 const DivisorFirstStyled = styled.div`

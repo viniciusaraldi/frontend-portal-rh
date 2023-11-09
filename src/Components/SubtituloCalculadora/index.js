@@ -11,6 +11,11 @@ const DivCalculadoraStyled = styled.div`
 
 const TituloStyled = styled.h3`
     text-transform: uppercase;
+    text-align: center;
+
+    @media screen and (max-width: 500px) {
+        padding: 0 .5em;
+    }    
 `;
 
 function SubtituloCalculadora() {

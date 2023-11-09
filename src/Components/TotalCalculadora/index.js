@@ -14,6 +14,16 @@ const DivTotalStyled = styled.div`
         padding-top: 5px;
         text-align: center;
     }
+
+    @media screen and (max-width: 500px) {
+        && {
+            width: 94%;
+        }
+        && > h3 {
+            width: 59%;
+            text-align: end;
+        }
+    }
 `;
 
 function TotalCalculadora() {

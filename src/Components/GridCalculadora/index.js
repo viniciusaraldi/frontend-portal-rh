@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import colaboradores from '../../services/Calculadora/colaboradores.js';
 import deletaColaborador from '../../services/Calculadora/deletaColaborador.js';
+import ButtonSubmit from '../ButtonSubmit/index.js';
 
 const TableStyled = styled.table`
     width: 80%;
@@ -38,6 +39,24 @@ const TableStyled = styled.table`
         cursor: pointer;
         width: 50px;
     }
+    
+    @media screen and (max-width: 500px) {
+        && {
+            width: 90%;
+        }
+        && button[type="button"] {
+            top: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 25px;
+        } 
+        && tr {
+            height: 60px;
+        }
+    }
+
+   
 `;
 
 function GridCalculadora() {
@@ -79,7 +98,7 @@ function GridCalculadora() {
                     <tr key={dado._id}>
                         <td>{dado.nome}</td>
                         <td>{dado.setor}</td>
-                        <td>{dado.qtdeCopo}<button onClick={handleClickDelete} className='userDelete' data-iduser={dado._id}>X</button></td>
+                        <td>{dado.qtdeCopo} <button type='button' onClick={handleClickDelete} className='userDelete' data-iduser={dado._id}>X</button></td>
                     </tr>
                 ))
                 }
